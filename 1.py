@@ -1957,7 +1957,6 @@ def bot(op):
 		    print wait["AutoKick"]
 		    print wait["Qr"]
 		else:                    
-		else:
 		    cl.sendText(msg.to,"Khusus Nadya")
 
 
