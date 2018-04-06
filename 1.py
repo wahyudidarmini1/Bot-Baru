@@ -12,39 +12,39 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 cl = LINETCR.LINE()
 #cl.login(qr=True)
-cl.login(token='EpvI3EkV5W1ZsSkwMA54.rAX10a6MHCMwuEeiTMBera.hZr8X+Ax+oUlC4FlphpfxG5a45l7nl10JnEb3PT3VkE=')
+cl.login(token='Er2zBvEDVBTBDpknfGkc.6mZHYoaLrB6ZemDONQ/Mha.yaQBD9wiG8TxmRGFWojM12fcjeiJFfcCg7Ve05VOjow=')
 cl.loginResult()
 print "Cl-Login Success\n"
 
-#ki = LINETCR.LINE()
+ki = LINETCR.LINE()
 #ki.login(qr=True)
-#ki.login(token='TOKEN_KAMU_DISINI_BEIB')
-#ki.loginResult()
-#print "Ki-Login Success\n"
+ki.login(token='Er6jwdBYoHdjEaXHl6z2.AZs3a8Vf+ipnhLTOmQbtuG.425HcghsfFTxmCi74igHYCc/rjDbRqjn7OxKYUBKNJw=')
+ki.loginResult()
+print "Ki-Login Success\n"
 
-#kk = LINETCR.LINE()
+kk = LINETCR.LINE()
 #kk.login(qr=True)
-#kk.login(token='TOKEN_KAMU_DISINI_BEIB')
-#kk.loginResult()
-#print "Kk-Login Success\n"
+kk.login(token='ErM2SRziTphhbFjiCYp2.SOI7MV+GPU//ng7dyQOwmG.UED+Yuft+LCI2rfOaza6tuuC0WFUJVPoQOJ4sjLpgPY=')
+kk.loginResult()
+print "Kk-Login Success\n"
 
-#kc = LINETCR.LINE()
+kc = LINETCR.LINE()
 #kc.login(qr=True)
-#kc.login(token='TOKEN_KAMU_DISINI_BEIB')
-#kc.loginResult()
-#print "Kc-Login Success\n"
+kc.login(token=' ErQuFSLhxNAzCVJrPaAe.4uWnRTJU51yT+/CjXTyHBG.5gamF40BgXld1KRiP3NkupcNgqvhMevf0x5c9hdM3Ns=')
+kc.loginResult()
+print "Kc-Login Success\n"
 
-#kr = LINETCR.LINE()
+kr = LINETCR.LINE()
 #kr.login(qr=True)
-#kr.login(token='TOKEN_KAMU_DISINI_BEIB')
-#kr.loginResult()
-#print "Kr-Login Success\n"
+kr.login(token='ErJmS7HpoLQ23pYMp8l3.eXGEKA8y87MQtoFvPFGwuW.yjmiD8T3nS9nQQUG/uMrtFIYwS2fbc7eofQmEJbn9Iw=')
+kr.loginResult()
+print "Kr-Login Success\n"
 
-#km = LINETCR.LINE()
+km = LINETCR.LINE()
 #km.login(qr=True)
-#km.login(token='TOKEN_KAMU_DISINI_BEIB')
-#km.loginResult()
-#print "Km-Login Success\n\n=====[Sukses All Login]====="
+km.login(token='ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzsV8wgW18KV1Jt0mKuiml0k2E=')
+km.loginResult()
+print "Km-Login Success\n\n=====[Sukses All Login]====="
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -178,7 +178,7 @@ groupMessage ="""
 ║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
-tjia="uda936836a9869eb86ec8ab992a4e8979"
+tjia="u6b34b703cbc5fc83cd1e5b6832a05352"
 
 setMessage ="""
 ╔═════════════════════════
@@ -312,8 +312,8 @@ mid = cl.getProfile().mid
 #Dmid = kr.getProfile().mid
 #Emid = km.getProfile().mid
 Bots=[mid]
-Creator=["uda936836a9869eb86ec8ab992a4e8979"]
-admin=["uda936836a9869eb86ec8ab992a4e8979"]
+Creator=["u6b34b703cbc5fc83cd1e5b6832a05352"]
+admin=["u6b34b703cbc5fc83cd1e5b6832a05352"]
 
 contact = cl.getProfile()
 backup1 = cl.getProfile()
@@ -1367,9 +1367,9 @@ def bot(op):
 		
             elif msg.text in ["Admin","admin"]:
                 msg.contentType = 13
-                admin1 = "uda936836a9869eb86ec8ab992a4e8979"
-                admin2 = "u8b2bb5214c1afc77d06901a535c23e30"
-                admin3 = "u57a54b914085fea6f04c19f6fe589057"
+                admin1 = "ue8cce1c8e02545beb310c7689eafa61c"
+                admin2 = "ub288bb9affe0a6efbe346ec362aa1632"
+                admin3 = "ue14c0daed8eee7562dffe709c6d6216e"
                 msg.contentMetadata = {'mid': tjia}
                 random.choice(KAC).sendMessage(msg)
                 #msg.contentMetadata = {'mid': admin1}
@@ -1823,108 +1823,108 @@ def bot(op):
 		    
  
 	    elif msg.text in ["Autocancel on"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["AutoCancel"][msg.to] = True
                 wait["AutoCancelon"] = True
                 cl.sendText(msg.to,"Auto Cancel Sudah Aktif")
 		print wait["AutoCancel"]
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")		
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")		
 
 	    elif msg.text in ["Autocancel off"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["AutoCancel"][msg.to] = False
                 wait["AutoCancelon"] = False
                 cl.sendText(msg.to,"Auto Cancel Sudah Di Nonaktifkan")
 		print wait["AutoCancel"]
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")	
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")	
 
 
 	    elif msg.text in ["Joinkick on"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["joinkick"] = True
                 wait["Sambutan"] = False
                 cl.sendText(msg.to,"Join Kick Sudah Aktif")
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")		
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")		
 
 	    elif msg.text in ["Joinkick off"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["joinkick"] = False
                 cl.sendText(msg.to,"Join Kick Sudah Di Nonaktifkan")
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")	
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")	
 
 		    
 
 	    elif msg.text in ["Invitepro on","Inviteprotect on"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["inviteprotect"] = True
                 cl.sendText(msg.to,"Invite Protect Sudah Aktif")
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")		
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")		
 
 	    elif msg.text in ["Invitepro off","Inviteprotect off"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["inviteprotect"] = False
                 cl.sendText(msg.to,"Invite Protect Sudah Di Nonaktifkan")
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")		    
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")		    
 
 	    elif "Qr on" in msg.text:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
 	        wait["Qr"][msg.to] = True
 	        wait["Qron"] = True
 	    	cl.sendText(msg.to,"QR Protect Sudah Aktif")
 		print wait["Qr"]	    	
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")	    	
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")	    	
 
 	    elif "Qr off" in msg.text:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
 	    	wait["Qr"][msg.to] = False
 	    	wait["Qron"] = False
 	    	cl.sendText(msg.to,"Qr Protect Sudah Di Nonaktifkan")
 		print wait["Qr"]	    	
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")	    	
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")	    	
                         
 	    elif msg.text in ["Autokick on"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["AutoKick"][msg.to] = True
                 wait["AutoKickon"] = True
                 cl.sendText(msg.to,"Auto Kick Sudah Aktif")
 		print wait["AutoKick"]
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")		
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")		
 
 	    elif msg.text in ["Autokick off"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["AutoKick"][msg.to] = False
                 wait["AutoKickon"] = False
                 cl.sendText(msg.to,"Auto Kick Sudah Di Nonaktifkan")
 		print wait["AutoKick"]
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")	
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")	
 
 
 	    elif msg.text in ["Ghost on"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["Ghost"] = True
                 cl.sendText(msg.to,"Ghost Sudah Aktif")
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")		
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")		
 
 	    elif msg.text in ["Ghost off"]:
-#	     if msg.from_ in admin:	        
+	     if msg.from_ in admin:	        
                 wait["Ghost"] = False
                 cl.sendText(msg.to,"Ghost Sudah Di Nonaktifkan")
-#	     else:
-#		    cl.sendText(msg.to,"Khusus Nadya")	     
+	     else:
+		    cl.sendText(msg.to,"Khusus Nadya")	     
 
             elif msg.text in ["Allprotect on"]:
-#		if msg.from_ in admin:
+		if msg.from_ in admin:
                     wait["AutoCancel"][msg.to] = True
                     wait["AutoCancelon"] = True
                     wait["inviteprotect"] = True 
@@ -1938,11 +1938,11 @@ def bot(op):
 		    print wait["AutoCancel"]
 		    print wait["AutoKick"]
 		    print wait["Qr"]
-#		else:
-#		    cl.sendText(msg.to,"Khusus Nadya")
+		else:
+		    cl.sendText(msg.to,"Khusus Nadya")
 
             elif msg.text in ["Allprotect off"]:
-#		if msg.from_ in admin:
+		if msg.from_ in admin:
                     wait["AutoCancel"][msg.to] = False
                     wait["AutoCancelon"] = False
                     wait["inviteprotect"] = False  
@@ -1956,9 +1956,9 @@ def bot(op):
 		    print wait["AutoCancel"]
 		    print wait["AutoKick"]
 		    print wait["Qr"]
-#		else:                    
-#		else:
-#		    cl.sendText(msg.to,"Khusus Nadya")
+		else:                    
+		else:
+		    cl.sendText(msg.to,"Khusus Nadya")
 
 
             elif msg.text in ["K on","Contact on"]:
@@ -3725,7 +3725,7 @@ def bot(op):
 
             elif "/cnkapten" in msg.text:
 		if msg.from_ in Creator:
-                    string = msg.text.replace("/cnkapten","Chucky Kapten")
+                    string = msg.text.replace("/cnkapten","yudi Kapten")
                     if len(string.decode('utf-8')) <= 5000:
                         profile = cl.getProfile()
                         profile.displayName = string
@@ -3734,7 +3734,7 @@ def bot(op):
 
             elif "/cntc1" in msg.text:
 		if msg.from_ in Creator:
-                    string = msg.text.replace("/cntc1","Chucky TC1")
+                    string = msg.text.replace("/cntc1","yudi TC1")
                     if len(string.decode('utf-8')) <= 5000:
                         profile = ki.getProfile()
                         profile.displayName = string
@@ -3743,7 +3743,7 @@ def bot(op):
 
             elif "/cntc2" in msg.text:
 		if msg.from_ in Creator:
-                    string = msg.text.replace("/cntc2","Chucky TC2")
+                    string = msg.text.replace("/cntc2","yudi TC2")
                     if len(string.decode('utf-8')) <= 5000:
                         profile = kk.getProfile()
                         profile.displayName = string
@@ -3752,7 +3752,7 @@ def bot(op):
 
             elif "/cntc3" in msg.text:
 		if msg.from_ in Creator:
-                    string = msg.text.replace("/cntc3","Chucky TC3")
+                    string = msg.text.replace("/cntc3","yudi TC3")
                     if len(string.decode('utf-8')) <= 5000:
                         profile = kc.getProfile()
                         profile.displayName = string
@@ -3761,7 +3761,7 @@ def bot(op):
 
             elif "/cntc4" in msg.text:
 		if msg.from_ in Creator:
-                    string = msg.text.replace("/cntc4","Chucky TC4")
+                    string = msg.text.replace("/cntc4","yudi TC4")
                     if len(string.decode('utf-8')) <= 5000:
                         profile = cl.getProfile()
                         profile.displayName = string
