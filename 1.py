@@ -76,8 +76,8 @@ selfMessage ="""
 ╠➩〘Getvid @〙
 ╠➩〘Friendlist〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║      line.me/ti/p/~yudi_std02 
 ╚═════════════════════════
 """
 
@@ -98,8 +98,8 @@ botMessage ="""
 ╠➩〘@bye (Usir Kapten)〙
 ╠➩〘Bye all (Usir Semua)〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║            +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -137,8 +137,8 @@ mediaMessage ="""
 ╠➩〘Id@th Text (Translate ID Ke TH〙
 ╠➩〘En@id Text (Translate En Ke ID〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -174,8 +174,8 @@ groupMessage ="""
 ╠➩〘Getgroup image〙
 ╠➩〘Urlgroup Image〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 tjia="uda936836a9869eb86ec8ab992a4e8979"
@@ -191,8 +191,8 @@ setMessage ="""
 ╠➩〘Contact on/off〙
 ╠➩〘Simisimi on/off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -218,8 +218,8 @@ creatorMessage ="""
 ╠➩〘Bot restart〙
 ╠➩〘Turn off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -259,8 +259,8 @@ adminMessage ="""
 ╠➩〘Leave on/off〙
 ╠➩〘All join / (TC1/2/3/4 Join)〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -282,8 +282,8 @@ helpMessage ="""
 ╠➩〘Speed test〙
 ╠➩〘Status〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -298,8 +298,8 @@ protectMessage ="""
 ╠➩〘Ghost on/off〙
 ╠➩〘Invitepro on/off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             +=WONG JOMBANG=+
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -1443,7 +1443,7 @@ def bot(op):
                   cl.sendText(msg.to,"The Admin List Is Empty")
               else:
                   cl.sendText(msg.to,"Tunggu...")
-                  mc = "╔═════════════════════════\n║        ☆☞ ADMIN VIPRO ☜☆\n╠═════════════════════════\n"
+                  mc = "╔═════════════════════════\n║        ☆☞ +=WONG JOMBANG=+ ☜☆\n╠═════════════════════════\n"
                   for mi_d in admin:
                       mc += "╠••> " +cl.getContact(mi_d).displayName + "\n"
                   cl.sendText(msg.to,mc + "╚═════════════════════════")
