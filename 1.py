@@ -1959,7 +1959,6 @@ def bot(op):
 		else:                    
 		    cl.sendText(msg.to,"Khusus Nadya")
 
-
             elif msg.text in ["K on","Contact on"]:
                 wait["Contact"] = True
                 cl.sendText(msg.to,"Contact Sudah Aktif")
