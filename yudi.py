@@ -2774,7 +2774,7 @@ def bot(op):
                 random.choice(KAC).inviteIntoGroup(msg.to,[midd])
 
             elif "Invite creator" in msg.text:
-                midd = "uda936836a9869eb86ec8ab992a4e8979"
+                midd = "u6b34b703cbc5fc83cd1e5b6832a05352"
                 random.choice(KAC).inviteIntoGroup(msg.to,[midd])
 
             elif msg.text in ["Welcome","welcome","Welkam","welkam","Wc","wc"]:
@@ -2835,7 +2835,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
 
-            elif msg.text in ["All join","Join all"]:
+            elif msg.text in ["All join","Masuk"]:
 		if msg.from_ in admin:
 		    G = cl.getGroup(msg.to)
                     ginfo = cl.getGroup(msg.to)
@@ -2938,9 +2938,9 @@ def bot(op):
 		except Exception as E:
 		    print E
 
-            elif msg.text in ["Bye all"]:
+            elif msg.text in ["Moleh"]:
               if wait["Leave"] == True:		    
-                    ki.leaveGroup(msg.to)
+                    #ki.leaveGroup(msg.to)
                     kk.leaveGroup(msg.to)
                     kc.leaveGroup(msg.to)
                     kr.leaveGroup(msg.to)
@@ -2957,9 +2957,9 @@ def bot(op):
 
             elif msg.text in ["Absen"]:
 		cl.sendText(msg.to,"Pasukan Absen!!")
-                ki.sendText(msg.to,"TC1 Hadiir  \(ˆ▿ˆ)/")
-                kk.sendText(msg.to,"TC2 Hadiir  \(ˆ▿ˆ)/")
-                kc.sendText(msg.to,"TC3 Hadiir  \(ˆ▿ˆ)/")
+                ki.sendText(msg.to,"yudi1 Hadiir  \(ˆ▿ˆ)/")
+                kk.sendText(msg.to,"yudi2 Hadiir  \(ˆ▿ˆ)/")
+                kc.sendText(msg.to,"yudi3 Hadiir  \(ˆ▿ˆ)/")
                 kr.sendText(msg.to,"Hadiir Semua Kapten  \(ˆ▿ˆ)/")
 
 
