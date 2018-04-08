@@ -11,7 +11,7 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="Er6jwdBYoHdjEaXHl6z2.AZs3a8Vf+ipnhLTOmQbtuG.425HcghsfFTxmCi74igHYCc/rjDbRqjn7OxKYUBKNJw=")
+cl.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
 cl.loginResult()
 
 kt = LINETCR.LINE()
@@ -3752,7 +3752,7 @@ def bot(op):
 						cl.sendText(manusia,("======[BROADCAST]======\n"+ bctxt +"\n\n\nbroadcasted by:" + cl.getContact(msg.from_).displayName))
 										 
 #========================================
-            elif msg.text.lower() == 'Masuk':
+            elif msg.text.lower() == 'Join all':
               if msg.from_ in admin + owner + creator:
 					G = cl.getGroup(msg.to)
 					G.preventJoinByTicket = False
@@ -3789,7 +3789,7 @@ def bot(op):
 					kt.updateGroup(G)
 #=====================================================================================
           
-            elif msg.text.lower() == 'Moleh':
+            elif msg.text.lower() == 'Bye':
               if msg.from_ in creator:
 				gid = cl.getGroupIdsJoined()
 				for i in gid:
