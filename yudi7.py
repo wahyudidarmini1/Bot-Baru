@@ -35,7 +35,7 @@ kc.login(token="ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzs
 kc.loginResult()
 
 kl = LINETCR.LINE()
-kl.login(token="ErFcmWMOZ1xXS963vcQc.6mZHYoaLrB6ZemDONQ/Mha.7lCu7BYBF/R7Cd+YS84qSq1jiP9gf4riTmBUfSey76M=")
+kl.login(token="ErJJdLa0UmYQ2V7PEiic.6mZHYoaLrB6ZemDONQ/Mha.CrjY0jbW6rZBORLNC0RbkiqKa4N+uD6AtfWtQ45xORM=")
 kl.loginResult()
 
 print "=============WONG-JOMBANG============="
