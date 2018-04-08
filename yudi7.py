@@ -1,39 +1,41 @@
 # -*- coding: utf-8 -*-
-#Tolong Jangan Ganti Creator Hargai Yang Membuat
+#Vipro_Bot
+
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 from bs4 import BeautifulSoup
-import time, random, sys, re, os, json, subprocess, threading, string, codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia,tempfile,glob,shutil,unicodedata,goslate
+from threading import Thread
+from googletrans import Translator
 from gtts import gTTS
-
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="EopxlGUaTxY2kBlfN9A0.1InGNGZn7NNY7fUrZGx9ua.UfOImWIBt/YBH9Tvw3k0vF0OhteAZK0jMGOfjrGNNXY=")
+cl.login(token="Er6jwdBYoHdjEaXHl6z2.AZs3a8Vf+ipnhLTOmQbtuG.425HcghsfFTxmCi74igHYCc/rjDbRqjn7OxKYUBKNJw=")
 cl.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="EogZ0YwAI3By9i6jjTt7.avnzqOTQntgFkB+/jodCLW.TBt5qQXQ7xq+CCXsfpwxfyMLyrYqChOfb4qwZvsFeIo=")
+kt.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
 kt.loginResult()
 
 ks = LINETCR.LINE()
-ks.login(token="EopP5w83zP4ByTmx1pV3.A+SYHpfmOT4uDbrwN7S4CW.93i0kpsFakakyrHmncNPW0/AUvZ0iHHZKLqXGcdE9m0=")
+ks.login(token="ErM2SRziTphhbFjiCYp2.SOI7MV+GPU//ng7dyQOwmG.UED+Yuft+LCI2rfOaza6tuuC0WFUJVPoQOJ4sjLpgPY=")
 ks.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="Eofcf0oFHyS2YkfaOwYa.sInuoTkVfNhUjQU4KarLUG.8Gn5ev51r7L++XIPqOyAX3J7jkNhCF0O9DUPq3v88c8=")
+ki.login(token="ErQuFSLhxNAzCVJrPaAe.4uWnRTJU51yT+/CjXTyHBG.5gamF40BgXld1KRiP3NkupcNgqvhMevf0x5c9hdM3Ns=")
 ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="EonpavFuyNA4Maz85kSe.8OCv7eAgFOIywa6B/lsWlG.Rwgb1KZ8f9ywfcd13XyuQN4h/i3y3E73g9dhMcG8ZV0=")
+kk.login(token="ErJmS7HpoLQ23pYMp8l3.eXGEKA8y87MQtoFvPFGwuW.yjmiD8T3nS9nQQUG/uMrtFIYwS2fbc7eofQmEJbn9Iw=")
 kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="EoLmyQch90U9NioyEMS0.B8vxriASm6+uB38nHjfgma.kZv2yQAVwGz0rS3MR8D1SI9Z7vCVGC4bwWZ7JfD3+0o=")
+kc.login(token="ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzsV8wgW18KV1Jt0mKuiml0k2E=")
 kc.loginResult()
 
 kl = LINETCR.LINE()
-kl.login(token="EoTlS5nksaNWhxHL5OSb.jd1h+vbUYLjvszUFzf1zwW.99ylTDgq3Ck4B9f+8014YtjbScma7iNkk0k6TGZAgsQ=")
+kl.login(token="ErFcmWMOZ1xXS963vcQc.6mZHYoaLrB6ZemDONQ/Mha.7lCu7BYBF/R7Cd+YS84qSq1jiP9gf4riTmBUfSey76M=")
 kl.loginResult()
 
 print "=============SHINGAMI-TEAM============="
@@ -80,8 +82,8 @@ helpMessage= """ ╔═══════════════════
 ╠ 回Help4 (Setting Bot)回
 ╠ 回Help5 (Broadcast Commands)回
 ╠ 
-╠ Creator by : Muhammad Fahmi Ridhani
-╠ Link : http://line.me/ti/p/~fahmi_077
+╠ Creator by : wahyudi WONG_JOMBANG
+╠ Link : http://line.me/ti/p/~yudi_std02
 ╠ 
 ╚═══════════════════
 """
@@ -204,10 +206,10 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 targets = []
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,"ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d"]
-admin = ["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d"]
-owner = ["ud7a8fbcc2af037c2c5bf181b89fda5f7","ue027db6fbfa316a7ec28ed8d2cc2757d"]
-creator=["ud7a8fbcc2af037c2c5bf181b89fda5f7"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,"ue8cce1c8e02545beb310c7689eafa61c","ub288bb9affe0a6efbe346ec362aa1632"]
+admin = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
+owner = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
+creator=["u6b34b703cbc5fc83cd1e5b6832a05352"]
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -1448,7 +1450,7 @@ def bot(op):
             elif msg.text.lower() == "crash":
               if msg.from_ in admin:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': "ud7a8fbcc2af037c2c5bf181b89fda5f7"}
+                msg.contentMetadata = {'mid': "u6b34b703cbc5fc83cd1e5b6832a05352"}
                 cl.sendMessage(msg)
 #-----------------=============================   
             elif msg.text in ["Me"]:
@@ -1863,7 +1865,7 @@ def bot(op):
 #Tolong Jangan Ganti mid CreatorNya Hargai Saya yang membuat!!!#
             elif msg.text in ["Creator"]:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': 'ud7a8fbcc2af037c2c5bf181b89fda5f7'}
+                msg.contentMetadata = {'mid': 'u6b34b703cbc5fc83cd1e5b6832a05352'}
                 cl.sendMessage(msg)
                 cl.sendText(msg.to,"Contact for Creator")
             elif "Admin on @" in msg.text:
@@ -3446,7 +3448,7 @@ def bot(op):
                             kt.sendText(msg.to,"Gagagl!")
                             print e
 #=================================================
-            elif msg.text == "Lurking":
+            elif msg.text == "Lurking""Cctv":
                     cl.sendText(msg.to, "Set point.")
                     try:
                         del wait2['readPoint'][msg.to]
@@ -3750,7 +3752,7 @@ def bot(op):
 						cl.sendText(manusia,("======[BROADCAST]======\n"+ bctxt +"\n\n\nbroadcasted by:" + cl.getContact(msg.from_).displayName))
 										 
 #========================================
-            elif msg.text.lower() == 'join all':
+            elif msg.text.lower() == 'Masuk':
               if msg.from_ in admin + owner + creator:
 					G = cl.getGroup(msg.to)
 					G.preventJoinByTicket = False
@@ -3787,7 +3789,7 @@ def bot(op):
 					kt.updateGroup(G)
 #=====================================================================================
           
-            elif msg.text.lower() == 'bot the end':
+            elif msg.text.lower() == 'Moleh':
               if msg.from_ in creator:
 				gid = cl.getGroupIdsJoined()
 				for i in gid:
