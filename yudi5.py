@@ -15,7 +15,7 @@ cl.login(token='ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzs
 cl.loginResult()
 
 ki = LINETCR.LINE() #darmini
-ki.login(token='Er2zBvEDVBTBDpknfGkc.6mZHYoaLrB6ZemDONQ/Mha.yaQBD9wiG8TxmRGFWojM12fcjeiJFfcCg7Ve05VOjow=')
+ki.login(token='EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=')
 ki.loginResult()
 
 kk = LINETCR.LINE() #gito
