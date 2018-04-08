@@ -38,7 +38,7 @@ kl = LINETCR.LINE()
 kl.login(token="ErFcmWMOZ1xXS963vcQc.6mZHYoaLrB6ZemDONQ/Mha.7lCu7BYBF/R7Cd+YS84qSq1jiP9gf4riTmBUfSey76M=")
 kl.loginResult()
 
-print "=============SHINGAMI-TEAM============="
+print "=============WONG-JOMBANG============="
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
