@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
+#Vipro_Bot
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,base64,requests,urllib
+from bs4 import BeautifulSoup
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
 cl.login(token='EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=')
