@@ -1,25 +1,49 @@
 # -*- coding: utf-8 -*-
-
+#Vipro_Bot
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
 from bs4 import BeautifulSoup
-#from imgurpython import ImgurClient
-import time, random, sys, re, os, json, subprocess, threading, string, codecs, requests, ctypes, urllib, urllib2, urllib3, tempfile, glob, shutil, unicodedata, goslate
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(qr=True)
+cl.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
 cl.loginResult()
 
+ki = LINETCR.LINE()
+ki.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
+ki.loginResult()
 
+ki2 = LINETCR.LINE()
+ki2.login(token="ErM2SRziTphhbFjiCYp2.SOI7MV+GPU//ng7dyQOwmG.UED+Yuft+LCI2rfOaza6tuuC0WFUJVPoQOJ4sjLpgPY=")
+ki2.loginResult()
+
+ki3 = LINETCR.LINE()
+ki3.login(token="ErQuFSLhxNAzCVJrPaAe.4uWnRTJU51yT+/CjXTyHBG.5gamF40BgXld1KRiP3NkupcNgqvhMevf0x5c9hdM3Ns=")
+ki3.loginResult()
+
+ki4 = LINETCR.LINE()
+ki4.login(token="ErJmS7HpoLQ23pYMp8l3.eXGEKA8y87MQtoFvPFGwuW.yjmiD8T3nS9nQQUG/uMrtFIYwS2fbc7eofQmEJbn9Iw=")
+ki4.loginResult()
+
+ki5 = LINETCR.LINE()
+ki5.login(token="ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzsV8wgW18KV1Jt0mKuiml0k2E=")
+ki5.loginResult()
+
+ki6 = LINETCR.LINE()
+ki6.login(token="ErdyNaoHNufN7rSNkS5a.SD28EqyjtLBjPT144PdcQG.Ja1Ql1oNCm/CS5tXqNSGTAVe2qcI6txUMdbi1nrP9SQ=")
+ki6.loginResult()
 
 print "SELFBOT PRANKBOTS\nSUCCES LOGIN\nSELAMAT MENGGUNAKANYA KAWAN"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╣)
-          『B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́』
+helpMessage="""(╣WONG-JOMBANG╣)
+          『DEWATA DARK』
   ✰ Me
   ✰ Add
   ✰ Cn "text"
@@ -103,13 +127,13 @@ helpMessage="""(╣••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́�
   ✰ Share:on/off
   ✰ Com:on/off
   ✰ Clock:on/off
-    (╣S̰֮֮Ḛ֮֮T̰֮֮T̰֮֮Ḭ֮֮N̰֮֮G̰֮֮ ֮G̰֮֮R̰֮֮O̰֮֮Ṵ֮֮P̰֮֮S̰֮֮╣)
+    (╣MENU GROUP╣)
   ★ Pro:on/off
   ★ Prolink:on/off
   ★ Proinvite:on/off
   ★ Procancel:on/off
-     『B༘̈́̈́L༘̈́̈́Ä༘́̈́C༘̈́̈́K༘̈́̈́   ̈́Ö༘́̈́F༘̈́̈́ ̈́  G༘̈́̈́Ä༘́̈́M༘̈́̈́Ë༘́̈́R༘̈́̈́』
-(╚••℘̰̰̈́ґ̰̰̈́∂̰̰̈́η̰̰̈́к̰̰̈́ ̰в̰̰̈́❍̰̰̈́т̰̰̈́ѕ̰̰̈́••╝)
+     『DEWATA DARK』
+    (╚WONG-JOMBANG╝)
 """
 helo="""SILAHKAN GUNAKAN BOT NYA .JIKA KAMU MAU TAMBAHIN ATAU EDIT LAGI SCRIPT NYA SILAHKN
 TAPI TOLONG HARGAI SAYA UNTUK TIDAK MERUBAH LEBEL PRANKBOTS DAN AUTO ADD ATAU AUTO LIKE TERIMAKASIH :D"""
@@ -123,7 +147,7 @@ mid = cl.getProfile().mid
 #ki5mid = ki5.getProfile().mid
 #ki6mid = ki6.getProfile().mid
 Bots=[mid]
-admsa = "mid kamu"
+admsa = "u6b34b703cbc5fc83cd1e5b6832a05352"
 
 wait = {
     'contact':False,
@@ -132,29 +156,28 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':""" 💥🔥【тнanĸѕ ғor add мe】🔥💥
-                              😎
-                         🖕🏻👕👊🏻
-                              👖
-                              👢
-          💥🔥AUTO ADD FRIEND🔥💥
+    'message':""" 💥🔥【MATUR SUWON】🔥💥
+                              
+                         
+                              
+                              
+          💥🔥TAMBAH KONCO🔥💥
 
-  ❂•••••••SPONSOR•••••••❂
-         https://line.me/R/ti/p/%40iya4481p
+  ❂•••••••IKLAN•••••••❂
+         https://line.me/R/ti/p/%yudi_std02
    ☆★☆★☆★☆★☆★☆★☆
-        http://line.me/ti/p/~@sml1492z
-
+        http://line.me/ti/p/~@yudi_std02
  ❂•••••••COSTUMER•••••••❂
-         http://line.me/ti/p/~@gnh2780p
+         http://line.me/ti/p/~@yudi_std02
 """,
     "lang":"JP",
-    "comment1":"""{AUTO LIKE BY}
-         https://line.me/R/ti/p/%40iya4481p
+    "comment1":"""{ROSO SENENG BY}
+         https://line.me/R/ti/p/%yudi_std02
    ☆★☆★☆★☆★☆★☆★☆
-        http://line.me/ti/p/~@sml1492z
+        http://line.me/ti/p/~@yudi_std02
 
- ❂•••••••COSTUMER•••••••❂
-         http://line.me/ti/p/~@gnh2780p
+ ❂•••••••PELANGGAN•••••••❂
+         http://line.me/ti/p/~@yudi_std02
 """,
     "commentOn":False,
     "likeOn":True,
@@ -527,7 +550,7 @@ def bot(op):
                 ki6.sendMessage(msg)
             elif "Creator" == msg.text:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': 'u84734a2bb2201d465e6015f90dc462f0'}
+                msg.contentMetadata = {'mid': 'u6b34b703cbc5fc83cd1e5b6832a05352'}
                 cl.sendMessage(msg)
             elif msg.text in ["Allgift","B1 gift"]:
                 msg.contentType = 9
@@ -778,7 +801,7 @@ def bot(op):
                     cl.sendText(msg.to,"Not for use less than group")
             elif "Creator" == msg.text:
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': 'ufce863f62f40706c01fa4a3c3c4cb096'}
+                msg.contentMetadata = {'mid': 'u6b34b703cbc5fc83cd1e5b6832a05352'}
                 cl.sendMessage(msg)
             elif "Mymid" == msg.text:
                 cl.sendText(msg.to,mid)
@@ -1361,11 +1384,11 @@ def bot(op):
                     cl.sendText(msg.to,"old user")
             elif cms(msg.text,["Add"]):
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': 'u5818cb4404411c2e2e6e6937d172cca8'}
+                msg.contentMetadata = {'mid': 'ub1ddbc7906094e56c9a6dd78e290c2aa'}
                 cl.sendText(msg.to,"❂•••••••••✧••••••••••❂")
                 cl.sendMessage(msg)
                 msg.contentType = 13
-                msg.contentMetadata = {'mid': 'udfaf52176415b46cb445ae2757ec85f3'}
+                msg.contentMetadata = {'mid': 'ub288bb9affe0a6efbe346ec362aa1632'}
                 cl.sendMessage(msg)
                 cl.sendText(msg.to,"❂••••••••✰•✰••••••••❂")
             elif "Set album:" in msg.text:
@@ -1419,7 +1442,7 @@ def bot(op):
                     cl.sendText(msg.to,str(i) + "Hapus kesulitan album🛡")
             elif msg.text.lower() == 'group id':
                 gid = cl.getGroupIdsJoined()
-                h = "❂•••••••L I S T  I D  G R O U P•••••••❂\n "
+                h = "❂•••••••WONG-JOMBANG•••••••❂\n "
                 for i in gid:
                     h += "[%s]:%s\n" % (cl.getGroup(i).name,i)
                 cl.sendText(msg.to,h)
@@ -1439,7 +1462,7 @@ def bot(op):
           #          ki5.leaveGroup(i)
                #     ki6.leaveGroup(i)
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,"Kitsune Bot Sudah Keluar Di semua grup")
+                    cl.sendText(msg.to,"DEWATA Bot WES METU TEKAN grup")
                 else:
                     cl.sendText(msg.to,"He declined all invitations")
             elif msg.text in ["Gcancelall"]:
@@ -2931,7 +2954,7 @@ def bot(op):
           #         ki5.sendText(msg.to,"done ✔")
                #    ki6.sendText(msg.to,"done ✔")
                    ki.sendText(msg.to,"blacklist done all removed 👮")
-            elif msg.text.lower() == 'kick@mbl':
+            elif msg.text.lower() == 'kickall':
                 if msg.toType == 2:
                     group = ki.getGroup(msg.to)
                     gMembMids = [contact.mid for contact in group.members]
