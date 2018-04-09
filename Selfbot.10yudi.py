@@ -1,60 +1,65 @@
 # -*- coding: utf-8 -*-
+#Vipro_Bot
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,ast,os,subprocess,requests
+from bs4 import BeautifulSoup
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 satpam = LINETCR.LINE() # Koplaxs
-satpam.login(token="EnaiT3mXvrVT7N5PcPV5.WVIB6Th9FuqOpB9Iw2XUbq.s6O/cBl2jQK97Q5WMYXP2tyu83YqZZc+pLvphdNROLU=")
+satpam.login(token="ErzgO8Y7HOBtp3yyo3Lf.0Gxc/M3RVqR4nYkPcDjtZW.96FgN3Cdr7hjAs0zw7/POGyQOzqsVmnUI77igW46rtM=")
 satpam.loginResult()
 
 cl = LINETCR.LINE() # Koplaxs
-cl.login(token="EnPyaZ5MV3ApA3rC62n2.AZs3a8Vf+ipnhLTOmQbtuG.tZEse8+oTCBzgua27m8x9ExA3ef5Ef0AZNevExoTNj4=")
+cl.login(token="EruEAAUA4SLxrMccwmA2.AZs3a8Vf+ipnhLTOmQbtuG.QQAjd79h9cwkgbL1vNpFwgBhinlB11FGyjNeWw3wN6w=")
 cl.loginResult()
 
 ki = LINETCR.LINE() #Luffy
-ki.login(token="EnG2uT8Er5Sy3PxoM0r7.8DHCNR+5ggo//QiQT7pj9W.WxUhyx1x4P4z/h94rcaJ9C7fevcmfnzS3fM9ajvnmXk=")
+ki.login(token="ErIR5b2rL0Av3TJjG632.SOI7MV+GPU//ng7dyQOwmG.zY2n/KCOdUXo3wO7F56Z/RgymSeob+y8NC1NQzZ4Vbo=")
 ki.loginResult()
 
 kk = LINETCR.LINE() #Zorro
-kk.login(token="EnXYQQfRKDfNMWLmEKYf.TxpN+3FqpfVz0URVVjPPxW.9s5CizTUqZePX+do5Ccwc70gJtEcuqnThQOlQwIp0f0=")
+kk.login(token="ErH8NdPtCcR9s6Hzq8f3.eXGEKA8y87MQtoFvPFGwuW.QFDBp3mIkVDavxXsADbnFrhBYM8B0A2dnQ+9SfDlOZk=")
 kk.loginResult()
 
 kc = LINETCR.LINE() #Sanji
-kc.login(token="En22qybCKti7mCFbxnH8.pIfscrd8L4dj1jrbrT2fca.JHecjLBkg14Hts7AVYeCB6b4otmei8yw1LqAKqqw8mY=")
+kc.login(token="ErfAkH5fA5Tm1BvUTjwb.drkXjI9kC7gz45kx2rUb2W.eXEIC613qcuwEhTpI5BV9zsPvGqZvro2iPqXKeo9i/A=")
 kc.loginResult()
 
 ks = LINETCR.LINE() #Ussop
-ks.login(token="EnNBIlnesOyayVG6gY94.DPUJL7N9FlH3q14qZJ5r5a.D2VkazGIa/WrfwoUT/COkseCTweflqm6ZYW0+T2BBq0=")
+ks.login(token="ErcqnykZaumo9O3pDCWf.StMJ2yMSv7H5XrT17lGnZW.Vhuwge8pIyhP1B87F3hfRGkJN21+f6dXwZVUx98TspY=")
 ks.loginResult()
 
 ka = LINETCR.LINE() #Chooper
-ka.login(token="EnRQ1Pp9wm6MN7o8TPB4.+Bc/Zlua/rxta3RDE9Qfra.PY3og6DniI6Xz+2ax3DFlfXIoJHRJqt11/8aqeFN1I0=")
+ka.login(token="Ertwn5QFZ6wW1CwxqeLa.SD28EqyjtLBjPT144PdcQG.Ak1bkvhraJONAyrT4tI5f7Pz3EPVnENFIzeNEUspka8=")
 ka.loginResult()
 
 kb = LINETCR.LINE() #Franky
-kb.login(token="EnfcwA7uyy2ze6r9wQQ8.0LFAw+X66CVCLF7PSB30Qa.y/WxNze+Ru+XY4hpiurcXlCmD86jPOhikw94dwDp2Dw=")
+kb.login(token="ErzVCL6856sDIdq2U4j9.VfG2daMSMKOL78PxRGOi6q.dQxp6f5TSAHnUQx089KEMgEdsp3WpdYdbUAqVrmud2s=")
 kb.loginResult()
 
 ko = LINETCR.LINE() #Brook
-ko.login(token="EngxLsYsRQPlWxKsMen1.hm/n508o500AIsyh+lXvmq.hVkPNy7lbVHFW8gNESD5FlW59Sfo982WPhJ9eHRR9Qs=")
+ko.login(token="ErYY00w5vdUNeuGBwt4e.4uWnRTJU51yT+/CjXTyHBG.a7kAzuV6uwedIhNnAlAMCJtFJiTXWLEgUckrAt9z1Ss=")
 ko.loginResult()
 
 ke = LINETCR.LINE() #Nami
-ke.login(token="En41DAQk4jKPj1dOJZjd.rOli1dtiBis50MI658yqRq.P/allG4ca9VmJTnJ++Opa8OLzMNX5YI6gNIDxXKQ5Q0=")
+ke.login(token="ErXB6Bsxb7JWLjkBceC8.1e8nOeP/17yuiWiheXA//a.alleq5xaDIkOrmCkYmkivvGVpBSwl/EGuqLRw28b6cg=")
 ke.loginResult()
 
 ku = LINETCR.LINE() #Robin
-ku.login(token="En4UfdE8DmVKvVkjBJk0.JAwaMojSWCnrhb405Gw7Sa.6LW1neZMo9BktTEMes4ljHOKuNAiNeDbDEFe3rdEFsA=")
+ku.login(token="ErleiWNoe1CrrcJx4UB3.Z7tUqKO5oaEP2cnIzYreyW.o1QVObq0uowZHGr1UPECX2ltZQ/7FOgXi6rxdOOxZ48=")
 ku.loginResult()
 
 satpam = LINETCR.LINE() # Jinbei
-satpam.login(token="En5x33Q8Twr52yioqfg2.kJj6gKL1avGlp7iF9MY8KG.oKgiUffFSF3UdMoWWDMQ5SOsi+7sKCfXt3CCwCXO3kI=")
+satpam.login(token="ErzgO8Y7HOBtp3yyo3Lf.0Gxc/M3RVqR4nYkPcDjtZW.96FgN3Cdr7hjAs0zw7/POGyQOzqsVmnUI77igW46rtM=")
 satpam.loginResult()
 
 k1 = LINETCR.LINE() #Backup (Gunanya Kalo Akun Self Ke Kick, Dy masuk ke Group dan Ngekick yang Kick Selfbot Dan Selfbot Di undang sama dia,lalu dy leave lagi :D)
-k1.login(token="EnPxnMbLHYGTV189gTqf.xJUtYDt++RBi3klp87+xlW.aZYYlrReV8+j5BKNJ+M+OgKA91CHcT2ux0ezwIklotQ=")
+k1.login(token="ErzgO8Y7HOBtp3yyo3Lf.0Gxc/M3RVqR4nYkPcDjtZW.96FgN3Cdr7hjAs0zw7/POGyQOzqsVmnUI77igW46rtM=")
 k1.loginResult()
 
 print "Login Success Plak"
