@@ -12,12 +12,12 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 cl = LINETCR.LINE() 
 #cl.login(qr=True)
-cl.login(token="EruEAAUA4SLxrMccwmA2.AZs3a8Vf+ipnhLTOmQbtuG.QQAjd79h9cwkgbL1vNpFwgBhinlB11FGyjNeWw3wN6w=")#1
+cl.login(token="ErIR5b2rL0Av3TJjG632.SOI7MV+GPU//ng7dyQOwmG.zY2n/KCOdUXo3wO7F56Z/RgymSeob+y8NC1NQzZ4Vbo=")#1
 cl.loginResult()
 
 ki = LINETCR.LINE() 
 #ki.login(qr=True)
-ki.login(token="ErIR5b2rL0Av3TJjG632.SOI7MV+GPU//ng7dyQOwmG.zY2n/KCOdUXo3wO7F56Z/RgymSeob+y8NC1NQzZ4Vbo=")#2
+ki.login(token="EruEAAUA4SLxrMccwmA2.AZs3a8Vf+ipnhLTOmQbtuG.QQAjd79h9cwkgbL1vNpFwgBhinlB11FGyjNeWw3wN6w=")#2
 ki.loginResult()
 
 kk = LINETCR.LINE() 
