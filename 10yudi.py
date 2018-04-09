@@ -4451,9 +4451,9 @@ def bot(op):
                                 #print rom
                                 chiya += rom[1] + "\n"
 
-                        cl.sendText(msg.to, "||Di Read Oleh||%s\n||By : ✰Ќriֆ✰ ✰ tɛǟʍ ċʏɮɛʀ-ǟʀʍʏ ɮօt ✰||\n\n>Pelaku CCTV<\n%s-=CCTV=-\n•Bintitan\n•Panuan\n•Kurapan\n•Kudisan\n\nAmiin Ya Allah\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "||Di Read Oleh||%s\n||By : ✰WAHYUDI✰ ✰ tɛǟʍ WONG-JOMBANG ɮօt ✰||\n\n>Pelaku CCTV<\n%s-=CCTV=-\n[%s]" % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                     else:
-                        cl.sendText(msg.to, "Ketik Cctv dulu Koplak\nBaru Ketik Toong\nDASAR PIKUN ♪")
+                        cl.sendText(msg.to, "Ketik Cctv dulu YUDI\nBaru Ketik Toong\nDASAR PIKUN ♪")
                         
             elif msg.text == "Cctv":
               if msg.from_ in admin:
@@ -4480,7 +4480,7 @@ def bot(op):
                             for rom in wait2["ROM"][msg.to].items():
                                 print "[Command] Check"
                                 chiya += rom[1] + "\n"
-                        cl.sendText(msg.to, "✔ ✰ tɛǟʍ ċʏɮɛʀ-ǟʀʍʏ ɮօt ✰\nRead : %s\n\n✖ Sider :\n%s\nPoint creation date n time:\n[%s]"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
+                        cl.sendText(msg.to, "✔ ✰ tɛǟʍ WONG-JOMBANG ɮօt ✰\nRead : %s\n\n✖ Sider :\n%s\nPoint creation date n time:\n[%s]"  % (wait2['readMember'][msg.to],chiya,setTime[msg.to]))
                         try:
                             del wait2['readPoint'][msg.to]
                             del wait2['readMember'][msg.to]
@@ -4528,7 +4528,7 @@ def bot(op):
                                 cl.sendText(msg.to,"Group cleanse")
 #-----------------------------------------------
          #----------------Fungsi Join Group Start-----------------------#
-            elif msg.text in ["1","Kr asup","Asup"]: #Panggil Semua Bot
+            elif msg.text in ["1","Masuk","Asup"]: #Panggil Semua Bot
               if msg.from_ in owner:
                 G = cl.getGroup(msg.to)
                 ginfo = cl.getGroup(msg.to)
@@ -5527,7 +5527,7 @@ def bot(op):
                 k3.sendText(msg.to,"★★★★★★★★")
                 k4.sendText(msg.to,"★★★★★★★★★")
                 k5.sendText(msg.to,"★★★★★★★★★★")
-                random.choice(KAC).sendText(msg.to,"Semua Hadir Boss\nSiap Protect Group\nAman Gak Aman Yang Penting Anu\n[✰ tɛǟʍ ċʏɮɛʀ-ǟʀʍʏ ɮօt ✰]")
+                random.choice(KAC).sendText(msg.to,"Semua Hadir Boss\nSiap Protect Group\nAman Gak Aman Yang Penting BOZ YUDI ADA\n[✰ tɛǟʍ WONG-JOMBANG ɮօt ✰]")
       #-------------Fungsi Respon Finish---------------------#
                             
 #==========================================
@@ -5927,7 +5927,7 @@ def bot(op):
               cl.sendText(msg.to,"======================")
               cl.sendMessage(msg)
               cl.sendText(msg.to,"======================")
-              cl.sendText(msg.to,"Itu Creator Kami Yang Manis Kalem 😜\nSmule : @RK_WAHYU\nNama : Wahyudi\nZodiak : Sagitarius")  
+              cl.sendText(msg.to,"Itu Creator Kami Yang Manis Kalem 😜\nSmule : SRI_YUDI_ISSC\nNama : Wahyudi\nZodiak : Sagitarius")  
       #-------------Fungsi Chat ----------------
             elif msg.text in ["Woy","woy","Woi","woi"]:
                  quote = ['Istri yang baik itu Istri yang Mengizinkan Suaminya untuk Poligami 😂😂😂.','Kunci Untuk Bikin Suami Bahagia itu cuma satu..\nIzinkan Suamimu Untuk Selingkuh Coyyy ','Ah Koplak Lu','Muka Lu Kaya Jembut','Ada Orang kah disini?','Ada Janda Yang Bisa Di Ajak Mojok Gak, Euy','Ada Perawan Nganggur ga Coy?']
@@ -6217,7 +6217,7 @@ def autolike():
           k2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
           k3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
           k3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
-          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
           print "Like"
         except:
           pass
@@ -6244,14 +6244,14 @@ def likePost():
                     k3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     k4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     k5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    k1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    k2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    k3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    k1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    k2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    k3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
                     print "Like"
                 except:
                     pass
