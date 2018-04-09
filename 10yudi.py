@@ -123,7 +123,7 @@ Keyowner ="""
 ╔═════════════
 ║       ✰ tɛǟʍ Wahyudi ɮօt ✰ 
 ╠═════════════
-║                    Owner : ✰ tɛǟʍ Wahyudi ɮօt ✰       
+║ Owner : ✰ tɛǟʍ Wahyudi ɮօt ✰       
 ╠═════════════
 ║   ◄]·♦·Menu For Admin·♦·[►
 ║╔════════════
@@ -182,7 +182,7 @@ Setgroup ="""
 ╔═════════════
 ║       ✰ tɛǟʍ Wahyudi ɮօt ✰ 
 ╠═════════════
-║                    Owner : ✰ tɛǟʍ Wahyudi ɮօt ✰       
+║ Owner : ✰ tɛǟʍ Wahyudi ɮօt ✰       
 ╠═════════════
 ║   ◄]·♦·Menu For Admin·♦·[►
 ║╔════════════
