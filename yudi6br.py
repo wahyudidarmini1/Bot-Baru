@@ -11,31 +11,31 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
+cl.login(token=" Errpbxde5duxhg4BHvA3.0A+Utf0H5XY+cqbEg8XjCW.bXEQ/9HNn4cIFuBKVOBT7cb0oS5+OZBpTTLvyzjdwX4=")
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
+ki.login(token="ErVoXpzubiM60v7Hrrd2.AZs3a8Vf+ipnhLTOmQbtuG.lX7Avq6+bh9cENqwQowbI/FBo72iCskXd+NJoYi3RB4=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE()
-ki2.login(token="ErM2SRziTphhbFjiCYp2.SOI7MV+GPU//ng7dyQOwmG.UED+Yuft+LCI2rfOaza6tuuC0WFUJVPoQOJ4sjLpgPY=")
+ki2.login(token="ErH8NdPtCcR9s6Hzq8f3.eXGEKA8y87MQtoFvPFGwuW.QFDBp3mIkVDavxXsADbnFrhBYM8B0A2dnQ+9SfDlOZk=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE()
-ki3.login(token="ErQuFSLhxNAzCVJrPaAe.4uWnRTJU51yT+/CjXTyHBG.5gamF40BgXld1KRiP3NkupcNgqvhMevf0x5c9hdM3Ns=")
+ki3.login(token="ErfAkH5fA5Tm1BvUTjwb.drkXjI9kC7gz45kx2rUb2W.eXEIC613qcuwEhTpI5BV9zsPvGqZvro2iPqXKeo9i/A=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE()
-ki4.login(token="ErJmS7HpoLQ23pYMp8l3.eXGEKA8y87MQtoFvPFGwuW.yjmiD8T3nS9nQQUG/uMrtFIYwS2fbc7eofQmEJbn9Iw=")
+ki4.login(token="ErcqnykZaumo9O3pDCWf.StMJ2yMSv7H5XrT17lGnZW.Vhuwge8pIyhP1B87F3hfRGkJN21+f6dXwZVUx98TspY=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE()
-ki5.login(token="ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzsV8wgW18KV1Jt0mKuiml0k2E=")
+ki5.login(token="Ertwn5QFZ6wW1CwxqeLa.SD28EqyjtLBjPT144PdcQG.Ak1bkvhraJONAyrT4tI5f7Pz3EPVnENFIzeNEUspka8=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE()
-ki6.login(token="ErdyNaoHNufN7rSNkS5a.SD28EqyjtLBjPT144PdcQG.Ja1Ql1oNCm/CS5tXqNSGTAVe2qcI6txUMdbi1nrP9SQ=")
+ki6.login(token="ErzVCL6856sDIdq2U4j9.VfG2daMSMKOL78PxRGOi6q.dQxp6f5TSAHnUQx089KEMgEdsp3WpdYdbUAqVrmud2s=")
 ki6.loginResult()
 
 print "SELFBOT PRANKBOTS\nSUCCES LOGIN\nSELAMAT MENGGUNAKANYA KAWAN"
