@@ -12,7 +12,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 cl = LINETCR.LINE() 
 #cl.login(qr=True)
-cl.login(token="ErIR5b2rL0Av3TJjG632.SOI7MV+GPU//ng7dyQOwmG.zY2n/KCOdUXo3wO7F56Z/RgymSeob+y8NC1NQzZ4Vbo=")#1
+cl.login(token="EroWhimHzHeL1Y3dg7m5.s0GaOrjP6Vfn98NxODhvLq.fD+I+kvxqzj7kpHmZCrzX67gUL6HcUGNyetdrrEfZic=")#1
 cl.loginResult()
 
 ki = LINETCR.LINE() 
