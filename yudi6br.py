@@ -11,34 +11,34 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token=" Errpbxde5duxhg4BHvA3.0A+Utf0H5XY+cqbEg8XjCW.bXEQ/9HNn4cIFuBKVOBT7cb0oS5+OZBpTTLvyzjdwX4=")
+cl.login(token=" ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="EryMnzzD5GNGtobhL0f3.0A+Utf0H5XY+cqbEg8XjCW.an6+lbQDdzvMrpPyFLhvVVaYUd9TYWB2wSQwsrKJkPw=")
+ki.login(token="ErYq8uR6zdhpb4l8VNob.drkXjI9kC7gz45kx2rUb2W.Q+y+jPqM97ec795kfIamMF/JfdhJH7pgxmaq2VhBOzo=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE()
-ki2.login(token="ErH8NdPtCcR9s6Hzq8f3.eXGEKA8y87MQtoFvPFGwuW.QFDBp3mIkVDavxXsADbnFrhBYM8B0A2dnQ+9SfDlOZk=")
+ki2.login(token="ErVmcbe6ILNRNeRaKrh3.eXGEKA8y87MQtoFvPFGwuW.ilPJGgdrZ2bjxR6bow/H5sF8hyxrqF3d7qOUTYrnIko=")
 ki2.loginResult()
 
 ki3 = LINETCR.LINE()
-ki3.login(token="ErfAkH5fA5Tm1BvUTjwb.drkXjI9kC7gz45kx2rUb2W.eXEIC613qcuwEhTpI5BV9zsPvGqZvro2iPqXKeo9i/A=")
+ki3.login(token="ErqeWRMeNDeFnqb0FsE8.1e8nOeP/17yuiWiheXA//a.MmEYMKXws3ri2ifcZWy6pmXgILxH0harLSVJtPDyRyk=")
 ki3.loginResult()
 
 ki4 = LINETCR.LINE()
-ki4.login(token="ErcqnykZaumo9O3pDCWf.StMJ2yMSv7H5XrT17lGnZW.Vhuwge8pIyhP1B87F3hfRGkJN21+f6dXwZVUx98TspY=")
+ki4.login(token="ErTVmOPrbfJ5a5LO7zyf.StMJ2yMSv7H5XrT17lGnZW.rMF/76j2t8ytEcA7l0ue8Xn4olZdLm825eDypqbByMc=")
 ki4.loginResult()
 
 ki5 = LINETCR.LINE()
-ki5.login(token="Ertwn5QFZ6wW1CwxqeLa.SD28EqyjtLBjPT144PdcQG.Ak1bkvhraJONAyrT4tI5f7Pz3EPVnENFIzeNEUspka8=")
+ki5.login(token="Erbw8FkQTsCSxWtKItOa.SD28EqyjtLBjPT144PdcQG.MRncp08pfgFL2ZQ080cJHVqAFkfPRtD6CYichKXOj6s=")
 ki5.loginResult()
 
 ki6 = LINETCR.LINE()
-ki6.login(token="ErzVCL6856sDIdq2U4j9.VfG2daMSMKOL78PxRGOi6q.dQxp6f5TSAHnUQx089KEMgEdsp3WpdYdbUAqVrmud2s=")
+ki6.login(token="ErVN3iCCCVGqLmMh37u9.VfG2daMSMKOL78PxRGOi6q.joiZOkRzJMFaIdCw8fc05/MTTUDw6jFH7SynZMohCAo=")
 ki6.loginResult()
 
-print "SELFBOT PRANKBOTS\nSUCCES LOGIN\nSELAMAT MENGGUNAKANYA KAWAN"
+print "SELFBOT wahyudi\nSUCCES LOGIN\nSELAMAT MENGGUNAKANYA KAWAN"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
