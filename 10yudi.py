@@ -17,7 +17,7 @@ cl.loginResult()
 
 ki = LINETCR.LINE() 
 #ki.login(qr=True)
-ki.login(token="ErABTmVSOeXNsWEwEaC2.AZs3a8Vf+ipnhLTOmQbtuG.r91iohlmzzyiI0MZm/CSjelfIfZkOJBJrBvEeq6Xczs=")#2
+ki.login(token="ErUKUHmjnn0ufHQXKMG3.0A+Utf0H5XY+cqbEg8XjCW.MO8axGgXA3M9HLHWVvshXBwdiL3zUJphGbJLSxHpXiY=")#2
 ki.loginResult()
 
 kk = LINETCR.LINE() 
@@ -275,7 +275,7 @@ Setgroup ="""
 ║     ✰ tɛǟʍ Wahyudi ɮօt ✰
 ╚═════════════
 """
-KAC=[cl,ki,kk,kc,ks,k1,k2,k3,k4,k5]
+KAC=[cl,ki,kk,kc,ks,k1,k2,k3,k4]
 DEF=[ki,kk,kc,ks,k1,k2,k3,k4,k5]
 kicker=[satpam1]
 mid = cl.getProfile().mid 
@@ -297,7 +297,7 @@ autocancel = {}
 autoinvite = []
 autoleaveroom = []
 targets = []
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,u6b34b703cbc5fc83cd1e5b6832a05352]
 induk=[mid]
 Creator=["u6b34b703cbc5fc83cd1e5b6832a05352"]
 admin=["u6b34b703cbc5fc83cd1e5b6832a05352",mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid,Smid1] #Krisna,kris,
