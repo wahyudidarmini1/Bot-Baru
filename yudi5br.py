@@ -1,42 +1,46 @@
 # -*- coding: utf-8 -*-
+#Chucky_Bot
 
-import CYBERTK
-from CYBERTK.lib.curve.ttypes import *
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob
+from bs4 import BeautifulSoup
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
-cl = CYBERTK.LINE()
-cl.login(token="EnB0CiZe7xeZAe9q4tX9.yNwSz4y2p8Bt7IRdRvpLu2q.zgKCGcaWpes2I/LRYYOo+fcfctJMNRrcwr+815hzLJQ=")
+cl = LINETCR.LINE()
+cl.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
 cl.loginResult()
 
-ki = CYBERTK.LINE()
-ki.login(token="EnMx1csVl4qKprMcz474.qRZv+8unsEnVqjMsvKxItTa.B8q1a6A6i+CK31x9mMDbQBRlcItyO3KcPjapA09thcY=")
+ki = LINETCR.LINE()
+ki.login(token="ErYq8uR6zdhpb4l8VNob.drkXjI9kC7gz45kx2rUb2W.Q+y+jPqM97ec795kfIamMF/JfdhJH7pgxmaq2VhBOzo=")
 ki.loginResult()
 
-ki2 = CYBERTK.LINE()
-ki2.login(token="EnNend1TCYrBxUrjBNwb.gvqnZMjyCnNInXZa3tYerQW.C1xhfs1F8Z1dZ8uAD+KlZcxXwNqtgcKq5U3kRCLrfFM=")
-ki2.loginResult()
+kk = LINETCR.LINE()
+kk.login(token="ErVmcbe6ILNRNeRaKrh3.eXGEKA8y87MQtoFvPFGwuW.ilPJGgdrZ2bjxR6bow/H5sF8hyxrqF3d7qOUTYrnIko=")
+kk.loginResult()
 
-ki3 = CYBERTK.LINE()
-ki3.login(token="Enj0OZSaz2n3NTFfIYp4.uck0I7Fyt5n2IylrjFkHbkba.XejXddWJ9Y17U8CrCXLHb/ROVBZ2Iek0ukTk+jDbcmg=")
-ki3.loginResult()
+kc = LINETCR.LINE()
+kc.login(token="Erfr5XQAVjKIXwfYjT33.Z7tUqKO5oaEP2cnIzYreyW.mifl520WPj4RNQ7i40LVxjVm6sIFaLK092xFHbrv2+s=")
+kc.loginResult()
 
-ki4 = CYBERTK.LINE()
-ki4.login(token="EnPKAdnRpYGUHoYi5LHc.10yH/7q285yGtOJnRyvXfD3a.GWTJIczqLYKz1Zw9a1aHSVuZuu8QF1VnwE21hIEJqJY=")
-ki4.loginResult()
+kr = LINETCR.LINE()
+kr.login(token="ErTVmOPrbfJ5a5LO7zyf.StMJ2yMSv7H5XrT17lGnZW.rMF/76j2t8ytEcA7l0ue8Xn4olZdLm825eDypqbByMc=")
+kr.loginResult()
 
-ki5 = CYBERTK.LINE()
-ki5.login(token="EnSQRksronMx3TrOQrD8.+WzM3+ORELyINB/i2uHoCca.jUcgVYI0rJCcnVdtRP0XKmmclK9bUxke5DVR+A7SQeY=")
-ki5.loginResult()
+km = LINETCR.LINE()
+km.login(token="Erbw8FkQTsCSxWtKItOa.SD28EqyjtLBjPT144PdcQG.MRncp08pfgFL2ZQ080cJHVqAFkfPRtD6CYichKXOj6s=")
+km.loginResult()
 
-print u"Login Success CYBERTK"
+print u"Login Success yudi"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-helpMessage ="""=====ҳ̸Ҳ̸ҳ Сўв∝я тҝ ҳ̸Ҳ̸ҳ=====
+helpMessage ="""=====ҳ̸Ҳ̸ҳ wong-jombang ҳ̸Ҳ̸ҳ=====
 
-__̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡|̲̲̲͡͡͡ ̲▫̲͡ ̲̲̲͡͡π̲̲͡͡ ̲̲͡▫̲̲͡͡ ̲|̡̡̡ ̡ ̴̡ı̴̡̡ ̡͌l̡̡̡̡.___ ┣▇▇▇═─
-▒▓█► ☆ тк в̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠σ̊̑̾͘т ¢̵̧͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚σ̷̧̺̠̰̳̿́͆̕̕͠ͅ ῃ̶͖̜̻̰͍̮̼̒́̐̑͒́̕т̧̢̯̱͕̠͙̤̙̄̂͗̊̈́̕я̶̛̙̩̱̗̯͌̈͆̆σ̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠ℓ̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ ◄█▓▒
+▒▓█►#-WAHYUDI-#◄█▓▒
 
 ☫[мувσт]
 ☫[мє]
@@ -63,7 +67,7 @@ __̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡|̲̲̲͡͡͡ ̲▫
 ☫[¢яєαтσя]
 ☫[ρєѕαη ѕєт:「тєχт」]
 
-   ☆ тк в̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠σ̊̑̾͘т ¢̵̧͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚σ̷̧̺̠̰̳̿́͆̕̕͠ͅ ῃ̶͖̜̻̰͍̮̼̒́̐̑͒́̕т̧̢̯̱͕̠͙̤̙̄̂͗̊̈́̕я̶̛̙̩̱̗̯͌̈͆̆σ̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠ℓ̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ ☆ 
+   ☆▒▓█►#-WAHYUDI-#◄█▓▒☆ 
 
 [¢̶̲̅ᴏ̶̲̅ᴍ̶̲̅ᴍ̶̲̅ᴀ̶̲̅ɴ̶̲̅ᴅ̶̲̅ ̶̲̅ɪ̶̲̅ɴ̶̲̅ ̶̲̅g̶̲̅ʀ̶̲̅ᴏ̶̲̅ᴜ̶̲̅ᴘ̶̲̅]
 ☫[кι¢к:「мι∂」]
@@ -89,9 +93,9 @@ __̴ı̴̴̡̡̡ ̡͌l̡̡̡ ̡͌l̡*̡̡ ̴̡ı̴̴̡ ̡̡͡|̲̲̲͡͡͡ ̲▫
 ☫[вαη:]
 ☫[υηвαη:] 
 
-   ☆ тк в̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠σ̊̑̾͘т ¢̵̧͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚σ̷̧̺̠̰̳̿́͆̕̕͠ͅ ῃ̶͖̜̻̰͍̮̼̒́̐̑͒́̕т̧̢̯̱͕̠͙̤̙̄̂͗̊̈́̕я̶̛̙̩̱̗̯͌̈͆̆σ̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠ℓ̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ ☆ 
+   ☆▒▓█►#-WAHYUDI-#◄█▓▒☆ 
 
-Support By ~ ҳ̸Ҳ̸ҳ Сўв∝я тҝ ҳ̸Ҳ̸ҳ
+Support By ~ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ
 """
 helo=""
 
@@ -103,8 +107,8 @@ ki3mid = ki3.getProfile().mid
 ki4mid = ki4.getProfile().mid
 ki5mid = ki5.getProfile().mid
 Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid]
-admsa = 'u6a66b6b389d27052f7c8ac0bdc2cee7e'
-admin = 'u6a66b6b389d27052f7c8ac0bdc2cee7e'
+admsa = 'u6b34b703cbc5fc83cd1e5b6832a05352'
+admin = 'u6b34b703cbc5fc83cd1e5b6832a05352'
 
 wait = {
     'contact':False,
@@ -113,9 +117,9 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':"Thanks For Add ☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\n\Support By ~ ҳ̸Ҳ̸ҳ Сўв∝я тҝ ҳ̸Ҳ̸ҳ\n\n✯==== Creator ====✯\n\nhttp://line.me/ti/p/~cybertk0",
+    'message':"Thanks For Add ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ\n\n\Support By ~ ҳ̸Ҳ̸ҳwahyudiҳ̸Ҳ̸ҳ\n\n✯==== Creator ====✯\n\nhttp://line.me/ti/p/~yudi_std02",
     "lang":"JP",
-    "comment":"Thanks For Add ☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\n[∆√ cувєя тк™ √∆]\n\n✯==== Creator ====✯\n\nhttp://line.me/ti/p/~cybertk0",
+    "comment":"Thanks For Add ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ\n\n[∆√ wahyudi √∆]\n\n✯==== Creator ====✯\n\nhttp://line.me/ti/p/~yudi_std02",
     "commentOn":True,
     "commentBlack":{},
     "wblack":False,
@@ -233,7 +237,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u6a66b6b389d27052f7c8ac0bdc2cee7e":
+                if msg.from_ == "u6b34b703cbc5fc83cd1e5b6832a05352":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -676,34 +680,34 @@ def bot(op):
             elif msg.text.lower() == 'respon':
                 profile = ki.getProfile()
                 text = profile.displayName + ""
-                ki.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki2.getProfile()
                 text = profile.displayName + ""
-                ki2.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki2.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki3.getProfile()
                 text = profile.displayName + ""
-                ki3.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki3.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki4.getProfile()
                 text = profile.displayName + ""
-                ki4.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki4.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki5.getProfile()
                 text = profile.displayName + ""
-                ki5.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki5.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki6.getProfile()
                 text = profile.displayName + ""
-                ki6.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki6.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki7.getProfile()
                 text = profile.displayName + ""
-                ki7.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki7.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki8.getProfile()
                 text = profile.displayName + ""
-                ki8.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki8.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki9.getProfile()
                 text = profile.displayName + ""
-                ki9.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki9.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
                 profile = ki10.getProfile()
                 text = profile.displayName + ""
-                ki10.sendText(msg.to, "☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆")
+                ki10.sendText(msg.to, "ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ")
 #--------------------------------------------------------                
             elif "Mid:" in msg.text:
                 mmid = msg.text.replace("Mid:","")
@@ -1160,7 +1164,7 @@ def bot(op):
                 for i in gid:
                     h += "[%s]:%s\n" % (cl.getGroup(i).name,i)
                 ki.sendText(msg.to,h)
-            elif msg.text in ["Bot out"]:
+            elif msg.text in ["Bot moleh"]:
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
                 gid = ki2.getGroupIdsJoined()
@@ -2438,8 +2442,8 @@ def bot(op):
                     _name = msg.text.replace("Kickall","")
                     gs = ki.getGroup(msg.to)
                     gs = ki2.getGroup(msg.to)
-                    ki.sendText(msg.to,"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\n[∆√ cувєя тк™ √∆]")
-                    ki2.sendText(msg.to,"\n\[∆√ cувєя тк™ √∆]\n Owner http://line.me//ti/p/~cybertk0")
+                    ki.sendText(msg.to,"ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ  ☆\n\n[∆√ wahyudi √∆]")
+                    ki2.sendText(msg.to,"\n\[∆√ wahyudi √∆]\n Owner http://line.me//ti/p/~yudi_std02")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -2498,7 +2502,7 @@ def bot(op):
 #-----------------------------------------------
 
 #-----------------------------------------------
-            elif msg.text.lower() == ["All join"]:
+            elif msg.text.lower() == ["masuk"]:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -2524,7 +2528,7 @@ def bot(op):
                         random.choice(KAC).updateGroup(G)
                        
 #-----------------------------------------------
-            elif msg.text in ["All join"]:
+            elif msg.text in ["masuk"]:
                 if msg.from_ in admsa:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
@@ -2681,7 +2685,7 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki7.updateGroup(G)         
 #-----------------------------------------------
-            elif msg.text in ["TK @bye"]:
+            elif msg.text in ["moleh"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -2756,36 +2760,36 @@ def bot(op):
                         pass
 #-----------------------------------------------
             elif "TK Key" in msg.text:
-                ki.sendText(msg.to,"""      􀜁􀇔􏿿􀜁􀇔􏿿 CYBER TK BOT [TK] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
+                ki.sendText(msg.to,"""      􀜁􀇔􏿿􀜁􀇔􏿿 ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
   
         
   
-☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+☆ wahyudi ☆
 """)
-                ki2.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿  􀜁􀇔􏿿􀜁􀇔􏿿 CYBER TK BOT [TK] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
+                ki2.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿  􀜁􀇔􏿿􀜁􀇔􏿿 ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
         
   
-☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+☆ wahyudi ☆
 """)
-                ki3.sendText(msg.to,"""     􀜁􀇔􏿿 􀜁􀇔􏿿􀜁􀇔􏿿 CYBER TK BOT [TK] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
+                ki3.sendText(msg.to,"""     􀜁􀇔􏿿 􀜁􀇔􏿿􀜁􀇔􏿿 ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
         
   
-☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+☆ wahyudi ☆
 """)
-                ki4.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿  􀜁􀇔􏿿􀜁􀇔􏿿 CYBER TK BOT [TK] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n        
+                ki4.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿  􀜁􀇔􏿿􀜁􀇔􏿿 ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n        
         
   
-☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+☆ wahyudi ☆
 """)
                 ki5.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿  􀜁􀇔􏿿􀜁􀇔􏿿 CYBER TK BOT [TK] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
         
   
-☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+☆ wahyudi ☆
 """)
                 ki6.sendText(msg.to,"""     􀜁􀇔􏿿􀜁􀇔􏿿  􀜁􀇔􏿿􀜁􀇔􏿿 CYBER TK BOT [TK] 􀜁􀇔􏿿􀜁􀇔􏿿  \n\n 􀜁􀇔􏿿 key Only Kicker 􀜁􀇔􏿿 \n\n􀜁􀇔􏿿[TK1 in]\n􀜁􀇔􏿿[1Aditname:]\n􀜁􀇔􏿿[B Cancel]\n􀜁􀇔􏿿[kick @]\n􀜁􀇔􏿿[Ban @]\n􀜁􀇔􏿿[kill]\n􀜁􀇔􏿿[BotChat]\n􀜁􀇔􏿿[Respons]\n􀜁􀇔􏿿[TK1 Gift]\n􀜁􀇔􏿿[TK1 bye]\n\n   
         g
   
-☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆
+☆ wahyudi ☆
 """)
 #-----------------------------------------------
             elif msg.text in ["Welcome","wc","welcome","Wc"]:
@@ -3457,47 +3461,47 @@ def autolike():
         if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
           try:    
             cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki2.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ  ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk")
+            ki3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki4.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki5.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ  ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki6.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki6.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki7.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki7.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki7.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki8.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki8.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki8.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki9.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki9.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki9.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki10.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki10.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki10.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki11.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki11.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki11.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki12.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki12.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")
+            ki12.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ  ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")
             ki13.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki13.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki13.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki14.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki14.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki14.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki15.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki15.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki15.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki16.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki16.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki16.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki17.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki17.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki17.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki18.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki18.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki18.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang√∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki19.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki19.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")            
+            ki19.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")            
             ki20.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-            ki20.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆ [∆√ cувєя тк™ √∆]\n\nhttp://line.me/ti/p/~cybertk0\n\n☆ TK  B̴̡̛͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠O̊̑̾͘T Ç̵͔̟̫̰̮̺̟̥̂̋̂͋͐͛͑̔̚̚O̷̧̺̠̰̳̿́͆̕̕͠ͅ N̶͖̜̻̰͍̮̼̒́̐̑͒́̕ͅŢ̢̯̱͕̠͙̤̙̄̂͗̊̈́̕R̶̛̙̩̱̗̯͌̈͆̆Ơ̴̡͈̖̺͖̙̝̩̞̐̂̀͂̏̚͟͠L̸̡̩̣̲̣̜̊̑̾̾͊̃͘͜ͅ  ☆\n\nhttp://line.me/ti/p/~cybertk0")  
+            ki20.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆ [∆√ wong-jombang √∆]\n\nhttp://line.me/ti/p/~yudi_std02\n\n☆ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ ☆\n\nhttp://line.me/ti/p/~yudi_std02")  
             print "Like"
             print "Like"
             print "Like"
