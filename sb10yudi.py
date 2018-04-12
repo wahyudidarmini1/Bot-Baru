@@ -11,7 +11,7 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 satpam = LINETCR.LINE() # Koplaxs
-#satpam.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
+satpam.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
 satpam.loginResult()
 
 cl = LINETCR.LINE() # Koplaxs
