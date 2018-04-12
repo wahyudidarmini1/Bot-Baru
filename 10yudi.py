@@ -17,7 +17,7 @@ cl.loginResult()
 
 ki = LINETCR.LINE() 
 #ki.login(qr=True)
-ki.login(token="ErYq8uR6zdhpb4l8VNob.drkXjI9kC7gz45kx2rUb2W.Q+y+jPqM97ec795kfIamMF/JfdhJH7pgxmaq2VhBOzo=")#2
+ki.login(token="ErfN8iSBCdfmRcjmWun2.AZs3a8Vf+ipnhLTOmQbtuG.fVrKaJazwHJJ0Yi28OJoxcqvt6d1pVVN/CiRRh0DbqY=")#2
 ki.loginResult()
 
 kk = LINETCR.LINE() 
@@ -62,7 +62,7 @@ k5.loginResult()
 
 satpam1 = LINETCR.LINE()  
 #satpam1.login(qr=True)
-satpam1.login(token="ErUKUHmjnn0ufHQXKMG3.0A+Utf0H5XY+cqbEg8XjCW.MO8axGgXA3M9HLHWVvshXBwdiL3zUJphGbJLSxHpXiY=")#satpam 
+satpam1.login(token="ErYq8uR6zdhpb4l8VNob.drkXjI9kC7gz45kx2rUb2W.Q+y+jPqM97ec795kfIamMF/JfdhJH7pgxmaq2VhBOzo=")#satpam 
 satpam1.loginResult()
 
 print "login success plak"
