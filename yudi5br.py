@@ -99,14 +99,14 @@ Support By ~ ҳ̸Ҳ̸ҳ#-wong-jombang-ҳ̸Ҳ̸ҳ
 """
 helo=""
 
-KAC=[cl,ki,ki2,ki3,ki4,ki5]
+KAC=[cl,ki,kk,kc,kr,km]
 mid = cl.getProfile().mid
-kimid = ki.getProfile().mid
-ki2mid = ki2.getProfile().mid
-ki3mid = ki3.getProfile().mid
-ki4mid = ki4.getProfile().mid
-ki5mid = ki5.getProfile().mid
-Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid]
+Amid = ki.getProfile().mid
+Bmid = kk.getProfile().mid
+Cmid = kc.getProfile().mid
+Dmid = kr.getProfile().mid
+Emid = km.getProfile().mid
+Bots = [mid,Amid,Bmid,Cmid,Dmid,Emid]
 admsa = 'u6b34b703cbc5fc83cd1e5b6832a05352'
 admin = 'u6b34b703cbc5fc83cd1e5b6832a05352'
 
