@@ -61,9 +61,10 @@ k5.login(token="Er0Kj659SMB1eHHMP4l5.s0GaOrjP6Vfn98NxODhvLq.dVskwm24t+N1FrVjrMNr
 k5.loginResult()
 
 satpam1 = LINETCR.LINE()  
-satpam1.login(token="ErUKUHmjnn0ufHQXKMG3.0A+Utf0H5XY+cqbEg8XjCW.MO8axGgXA3M9HLHWVvshXBwdiL3zUJphGbJLSxHpXiY=")#satpam 
 #satpam1.login(qr=True)
+satpam1.login(token="ErUKUHmjnn0ufHQXKMG3.0A+Utf0H5XY+cqbEg8XjCW.MO8axGgXA3M9HLHWVvshXBwdiL3zUJphGbJLSxHpXiY=")#satpam 
 satpam1.loginResult()
+
 print "login success plak"
 reload(sys)
 sys.setdefaultencoding('utf-8')
