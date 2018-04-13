@@ -62,7 +62,7 @@ k5.loginResult()
 
 satpam1 = LINETCR.LINE()  
 #satpam1.login(qr=True)
-satpam1.login(token="Er0Kj659SMB1eHHMP4l5.s0GaOrjP6Vfn98NxODhvLq.dVskwm24t+N1FrVjrMNrrDB4WCJNzjUDqKnQHPKyjck=")#satpam 
+satpam1.login(token="ErDbAYXZKzz87MXMK961.hSPlQK0sOlldo8W2iFcJWq.QLWrkVhkfaP17DS5WjAlSHI2u7nzf0OqjM0fvkfSA3Q=")#satpam 
 satpam1.loginResult()
 
 print "login success plak"
