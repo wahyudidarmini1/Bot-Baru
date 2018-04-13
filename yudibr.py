@@ -1,67 +1,40 @@
 # -*- coding: utf-8 -*-
-#baru
-import Acil
-from Acil.lib.curve.ttypes import *
-from datetime import datetime
-from PyDictionary import PyDictionary
-from bs4 import BeautifulSoup
-from mergedict import MergeDict
-from mergedict import ConfigDict
-from gtts import gTTS
-from pyowm import OWM
-from enum import Enum 
-from django.http import HttpResponse
-from flask import Flask, send_from_directory, redirect as redirect_flask, render_template
-from random import randint
-import time, random, sys, re, os, json
-import subprocess, threading, string,codecs, requests, tweepy, ctypes, urllib, urllib2, wikipedia,cookielib,urllib3
-import urllib3
-import certifi
-import ssl
-import html5lib,shutil
-import subprocess as cmd
-import csv
-import os
-import errno
-import imp
-import StringIO
-import traceback
-import linecache
-import stat
-import cStringIO
-import urlparse
-import logging
-import argparse
-import mimic
-import xml
-import base64
-import ast
+#Vipro_Bot
 
-cl = Acil.LINE()
-cl.login(token="EnAj23Jh8RuJPIj8gSR2.AZs3a8Vf+ipnhLTOmQbtuG.IMP3CkWJzbWurJzxISj1C93pJEV6ekIPia+yceUIGDY=")
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
+from datetime import datetime
+from bs4 import BeautifulSoup
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
+
+cl = LINETCR.LINE()
+cl.login(token="Er54uZxOtrrjxO0SswE2.AZs3a8Vf+ipnhLTOmQbtuG.YWknzSzd4fxIrcN/PoZm1KhS75FCxBVyu3HhEN8isUI=")
 cl.loginResult()
 
-kt = Acil.LINE()
-kt.login(token="EnvQXVzt3IgL2QvxUgz8.pIfscrd8L4dj1jrbrT2fca.lJOK5Qp8g5KnPMCGvZnKxlyBqwaWvtTjiWQiHJoch54=")
+kt = LINETCR.LINE()
+kt.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
 kt.loginResult()
 
-ks = Acil.LINE()
-ks.login(token="EnJHnzZtcLZy08jUudr8.6aZTpsG37MxD+MqNsJxP6a.pZsWL5U6ieTsZrFJuMXnf7QpspabSy9KaU1zGy6VO6I=")
+ks = LINETCR.LINE()
+ks.login(token="ErHBdiPo6AFKXjCqTOGb.drkXjI9kC7gz45kx2rUb2W.8lMnVfJ9xWvvRxvYnB1uxxT/o2FbaJSmb7dxiyvhrsE=")
 ks.loginResult()
 
-ki = Acil.LINE()
-ki.login(token="EnJ6mjXHY2IGs6R9n1Hf.TxpN+3FqpfVz0URVVjPPxW.zUTh0PiZgXO1pQY7kHa5tn8g8AHT5ivC1FqRLTsiIGc=")
+ki = LINETCR.LINE()
+ki.login(token="ErVmcbe6ILNRNeRaKrh3.eXGEKA8y87MQtoFvPFGwuW.ilPJGgdrZ2bjxR6bow/H5sF8hyxrqF3d7qOUTYrnIko=")
 ki.loginResult()
 
-kk = Acil.LINE()
-kk.login(token="En6QESR7hoEmT4F3A2m4.DPUJL7N9FlH3q14qZJ5r5a.SwCLojcGrkvRGB2rzgPJH+k0P5UD2C+PLy3yzCRF51I=")
+kk = LINETCR.LINE()
+kk.login(token="ErqiO4H8zAHKfnFUxYp8.1e8nOeP/17yuiWiheXA//a.084MroAJQmR7zg+X/j6HN4DQ/F08NK2+Aurn0SUAnpc=")
 kk.loginResult()
 
-kc = Acil.LINE()
-kc.login(token="EnlG4y1876rJ6k4O0WL4.+Bc/Zlua/rxta3RDE9Qfra.GhjAQy9dGlOPyMu05Y9wgNRDI7UHt1VnAiVViGHAnlY=")
+kc = LINETCR.LINE()
+kc.login(token="ErGgCtK6JauWilGoYj7f.StMJ2yMSv7H5XrT17lGnZW.9TbzAmzjeHGuF953Z0x1E8/ylr7Zxy9nJxvlG55CrxQ=")
 kc.loginResult()
 
-print "Acil"
+print "yudi"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 helpMessage= """\n
