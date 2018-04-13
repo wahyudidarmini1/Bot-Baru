@@ -51,7 +51,7 @@ ke.login(token="ErmrlvL7091UXVUJCqP3.Z7tUqKO5oaEP2cnIzYreyW.wADLJp+/DPWgp1rzWSMn
 ke.loginResult()
 
 ku = LINETCR.LINE() #Robin
-ku.login(token="Er0Kj659SMB1eHHMP4l5.s0GaOrjP6Vfn98NxODhvLq.dVskwm24t+N1FrVjrMNrrDB4WCJNzjUDqKnQHPKyjck=")
+ku.login(token="Erm7mhBa4hcUZkmYubSc.Ee/eeDlrP0uTdFlXuHf9Na.x1nghoP+sItxOs9IdoL1/LuUw2fF5UaxiHhxr7XtaOI=")
 ku.loginResult()
 
 satpam = LINETCR.LINE() # Jinbei
