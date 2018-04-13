@@ -55,7 +55,7 @@ ku.login(token="Erm7mhBa4hcUZkmYubSc.Ee/eeDlrP0uTdFlXuHf9Na.x1nghoP+sItxOs9IdoL1
 ku.loginResult()
 
 satpam = LINETCR.LINE() # Jinbei
-satpam.login(token="ErUKUHmjnn0ufHQXKMG3.0A+Utf0H5XY+cqbEg8XjCW.MO8axGgXA3M9HLHWVvshXBwdiL3zUJphGbJLSxHpXiY=")
+satpam.login(token="ErDbAYXZKzz87MXMK961.hSPlQK0sOlldo8W2iFcJWq.QLWrkVhkfaP17DS5WjAlSHI2u7nzf0OqjM0fvkfSA3Q=")
 satpam.loginResult()
 
 k1 = LINETCR.LINE() #Backup (Gunanya Kalo Akun Self Ke Kick, Dy masuk ke Group dan Ngekick yang Kick Selfbot Dan Selfbot Di undang sama dia,lalu dy leave lagi :D)
