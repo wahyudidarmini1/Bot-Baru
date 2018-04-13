@@ -11,15 +11,15 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 satpam = LINETCR.LINE() # Koplaxs
-satpam.login(token="Erm7mhBa4hcUZkmYubSc.Ee/eeDlrP0uTdFlXuHf9Na.x1nghoP+sItxOs9IdoL1/LuUw2fF5UaxiHhxr7XtaOI=")
+satpam.login(token="Er54uZxOtrrjxO0SswE2.AZs3a8Vf+ipnhLTOmQbtuG.YWknzSzd4fxIrcN/PoZm1KhS75FCxBVyu3HhEN8isUI=")
 satpam.loginResult()
 
 cl = LINETCR.LINE() # Koplaxs
-cl.login(token="ErfN8iSBCdfmRcjmWun2.AZs3a8Vf+ipnhLTOmQbtuG.fVrKaJazwHJJ0Yi28OJoxcqvt6d1pVVN/CiRRh0DbqY=")
+cl.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
 cl.loginResult()
 
 ki = LINETCR.LINE() #Luffy
-ki.login(token="ErYq8uR6zdhpb4l8VNob.drkXjI9kC7gz45kx2rUb2W.Q+y+jPqM97ec795kfIamMF/JfdhJH7pgxmaq2VhBOzo=")
+ki.login(token="ErHBdiPo6AFKXjCqTOGb.drkXjI9kC7gz45kx2rUb2W.8lMnVfJ9xWvvRxvYnB1uxxT/o2FbaJSmb7dxiyvhrsE=")
 ki.loginResult()
 
 kk = LINETCR.LINE() #Zorro
@@ -27,27 +27,27 @@ kk.login(token="ErVmcbe6ILNRNeRaKrh3.eXGEKA8y87MQtoFvPFGwuW.ilPJGgdrZ2bjxR6bow/H
 kk.loginResult()
 
 kc = LINETCR.LINE() #Sanji
-kc.login(token="Er2V9pdiXSSJYMgx18d8.1e8nOeP/17yuiWiheXA//a.5OYbOSO41vfKCH8eo2QoRaD2hnWn8x+pOSXe7z2HOKU=")
+kc.login(token="ErqiO4H8zAHKfnFUxYp8.1e8nOeP/17yuiWiheXA//a.084MroAJQmR7zg+X/j6HN4DQ/F08NK2+Aurn0SUAnpc=")
 kc.loginResult()
 
 ks = LINETCR.LINE() #Ussop
-ks.login(token="ErTVmOPrbfJ5a5LO7zyf.StMJ2yMSv7H5XrT17lGnZW.rMF/76j2t8ytEcA7l0ue8Xn4olZdLm825eDypqbByMc=")
+ks.login(token="ErGgCtK6JauWilGoYj7f.StMJ2yMSv7H5XrT17lGnZW.9TbzAmzjeHGuF953Z0x1E8/ylr7Zxy9nJxvlG55CrxQ=")
 ks.loginResult()
 
 ka = LINETCR.LINE() #Chooper
-ka.login(token="Erbw8FkQTsCSxWtKItOa.SD28EqyjtLBjPT144PdcQG.MRncp08pfgFL2ZQ080cJHVqAFkfPRtD6CYichKXOj6s=")
+ka.login(token="Er69AWhKw6JwPIpT9hka.SD28EqyjtLBjPT144PdcQG.nKN5kwmLup/JGQBmW4jkFWtmwR+5unHmPSyQI05cT6k=")
 ka.loginResult()
 
 kb = LINETCR.LINE() #Franky
-kb.login(token="ErVN3iCCCVGqLmMh37u9.VfG2daMSMKOL78PxRGOi6q.joiZOkRzJMFaIdCw8fc05/MTTUDw6jFH7SynZMohCAo=")
+kb.login(token="ErgYB2TBietY8IsSNnv9.VfG2daMSMKOL78PxRGOi6q.oXpwX0tzyCO55ulY+sE1BzfWU1dGVgHd/p3YwQRIEME=")
 kb.loginResult()
 
 ko = LINETCR.LINE() #Brook
-ko.login(token="ErbCGFJrfizHGRMwuCdf.0Gxc/M3RVqR4nYkPcDjtZW.zJruRkwA9G4MJ65S4qDZD2jGglGU4JH9T3y2oLjt7uM=")
+ko.login(token="ErphLGUtGi9podXt6rbf.0Gxc/M3RVqR4nYkPcDjtZW.J+4OoKPfOyM0HmXe8vJwPd2L+6ODrp4eLFxnNIlqqbA=")
 ko.loginResult()
 
 ke = LINETCR.LINE() #Nami
-ke.login(token="Erfr5XQAVjKIXwfYjT33.Z7tUqKO5oaEP2cnIzYreyW.mifl520WPj4RNQ7i40LVxjVm6sIFaLK092xFHbrv2+s=")
+ke.login(token="ErmrlvL7091UXVUJCqP3.Z7tUqKO5oaEP2cnIzYreyW.wADLJp+/DPWgp1rzWSMnz/UqFnKCoiKN0IgqL4i0fD4=")
 ke.loginResult()
 
 ku = LINETCR.LINE() #Robin
