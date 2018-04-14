@@ -52,7 +52,7 @@ k3.loginResult()
 
 k4 = LINETCR.LINE() 
 #k4.login(qr=True)
-k4.login(token="Er0Kj659SMB1eHHMP4l5.s0GaOrjP6Vfn98NxODhvLq.dVskwm24t+N1FrVjrMNrrDB4WCJNzjUDqKnQHPKyjck=")#9
+k4.login(token="ErDbAYXZKzz87MXMK961.hSPlQK0sOlldo8W2iFcJWq.QLWrkVhkfaP17DS5WjAlSHI2u7nzf0OqjM0fvkfSA3Q=")#9
 k4.loginResult()
 
 k5 = LINETCR.LINE() 
