@@ -11,7 +11,7 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="Er54uZxOtrrjxO0SswE2.AZs3a8Vf+ipnhLTOmQbtuG.YWknzSzd4fxIrcN/PoZm1KhS75FCxBVyu3HhEN8isUI=")
+cl.login(token="ErDbAYXZKzz87MXMK961.hSPlQK0sOlldo8W2iFcJWq.QLWrkVhkfaP17DS5WjAlSHI2u7nzf0OqjM0fvkfSA3Q=")
 cl.loginResult()
 
 kt = LINETCR.LINE()
