@@ -19,7 +19,7 @@ kt.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaS
 kt.loginResult()
 
 ks = LINETCR.LINE()
-ks.login(token="ErHBdiPo6AFKXjCqTOGb.drkXjI9kC7gz45kx2rUb2W.8lMnVfJ9xWvvRxvYnB1uxxT/o2FbaJSmb7dxiyvhrsE=")
+ks.login(token="Er7i7eG4tYumZYLGILw4./0DOo/10A+PUJG8iHA76Pa.xZYotGiBJf5ZRWH1gEQ8JwIKweDg0F2H2M2101t94ns=")
 ks.loginResult()
 
 ki = LINETCR.LINE()
@@ -336,8 +336,8 @@ autoinvite = []
 autoleaveroom = []
 targets = []
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid]
-admin = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
-owner = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
+admin = ["u6b34b703cbc5fc83cd1e5b6832a05352","u1eca4baa4d12a0b2c33bcc3621f0a3c1"]
+owner = ["u6b34b703cbc5fc83cd1e5b6832a05352","u1eca4baa4d12a0b2c33bcc3621f0a3c1"]
 wait = {
     'contact':False,
     'autoJoin':True,
