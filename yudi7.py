@@ -11,31 +11,31 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="EricqpQ0fQ77hNtehf89.VfG2daMSMKOL78PxRGOi6q.g1RT7aN8vW5lurGY2Sqed8KryZClPS9AjKRHiuCrSUk=")
+cl.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
 cl.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="ErfN8iSBCdfmRcjmWun2.AZs3a8Vf+ipnhLTOmQbtuG.fVrKaJazwHJJ0Yi28OJoxcqvt6d1pVVN/CiRRh0DbqY=")
+kt.login(token="ErHBdiPo6AFKXjCqTOGb.drkXjI9kC7gz45kx2rUb2W.8lMnVfJ9xWvvRxvYnB1uxxT/o2FbaJSmb7dxiyvhrsE=")
 kt.loginResult()
 
 ks = LINETCR.LINE()
-ks.login(token="ErM2SRziTphhbFjiCYp2.SOI7MV+GPU//ng7dyQOwmG.UED+Yuft+LCI2rfOaza6tuuC0WFUJVPoQOJ4sjLpgPY=")
+ks.login(token="ErCBFU0tdoHFMlKOwsy3.eXGEKA8y87MQtoFvPFGwuW.Vx0KFfWTloatnOQvYlsano/C1ippBiQ8XypfBYy77gk=")
 ks.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="ErQuFSLhxNAzCVJrPaAe.4uWnRTJU51yT+/CjXTyHBG.5gamF40BgXld1KRiP3NkupcNgqvhMevf0x5c9hdM3Ns=")
+ki.login(token="ErqiO4H8zAHKfnFUxYp8.1e8nOeP/17yuiWiheXA//a.084MroAJQmR7zg+X/j6HN4DQ/F08NK2+Aurn0SUAnpc=")
 ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="ErJmS7HpoLQ23pYMp8l3.eXGEKA8y87MQtoFvPFGwuW.yjmiD8T3nS9nQQUG/uMrtFIYwS2fbc7eofQmEJbn9Iw=")
+kk.login(token="ErQj5JDIulup80zVE3Zf.StMJ2yMSv7H5XrT17lGnZW.DJsgZiIRMtFcollpiulxmySGbTHINiBEXGU8h+Sljfk=")
 kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="ErkGbLIf82TfbsOA29Xb.drkXjI9kC7gz45kx2rUb2W.+njAALbyq1Cex0DNWOzsV8wgW18KV1Jt0mKuiml0k2E=")
+kc.login(token="Er69AWhKw6JwPIpT9hka.SD28EqyjtLBjPT144PdcQG.nKN5kwmLup/JGQBmW4jkFWtmwR+5unHmPSyQI05cT6k=")
 kc.loginResult()
 
 kl = LINETCR.LINE()
-kl.login(token="ErdyNaoHNufN7rSNkS5a.SD28EqyjtLBjPT144PdcQG.Ja1Ql1oNCm/CS5tXqNSGTAVe2qcI6txUMdbi1nrP9SQ=")
+kl.login(token="ErgYB2TBietY8IsSNnv9.VfG2daMSMKOL78PxRGOi6q.oXpwX0tzyCO55ulY+sE1BzfWU1dGVgHd/p3YwQRIEME=")
 kl.loginResult()
 
 print "=============WONG-JOMBANG============="
@@ -3752,7 +3752,7 @@ def bot(op):
 						cl.sendText(manusia,("======[BROADCAST]======\n"+ bctxt +"\n\n\nbroadcasted by:" + cl.getContact(msg.from_).displayName))
 										 
 #========================================
-            elif msg.text.lower() == 'Join all':
+            elif msg.text.lower() == 'Masuk':
               if msg.from_ in admin + owner + creator:
 					G = cl.getGroup(msg.to)
 					G.preventJoinByTicket = False
@@ -3789,7 +3789,7 @@ def bot(op):
 					kt.updateGroup(G)
 #=====================================================================================
           
-            elif msg.text.lower() == 'Bye':
+            elif msg.text.lower() == 'Moleh':
               if msg.from_ in creator:
 				gid = cl.getGroupIdsJoined()
 				for i in gid:
