@@ -18,31 +18,31 @@ print "Cl-Login Success\n"
 
 ki = LINETCR.LINE()
 #ki.login(qr=True)
-ki.login(token='ErYq8uR6zdhpb4l8VNob.drkXjI9kC7gz45kx2rUb2W.Q+y+jPqM97ec795kfIamMF/JfdhJH7pgxmaq2VhBOzo=')
+ki.login(token='ErHBdiPo6AFKXjCqTOGb.drkXjI9kC7gz45kx2rUb2W.8lMnVfJ9xWvvRxvYnB1uxxT/o2FbaJSmb7dxiyvhrsE=')
 ki.loginResult()
 print "Ki-Login Success\n"
 
 kk = LINETCR.LINE()
 #kk.login(qr=True)
-kk.login(token='ErVmcbe6ILNRNeRaKrh3.eXGEKA8y87MQtoFvPFGwuW.ilPJGgdrZ2bjxR6bow/H5sF8hyxrqF3d7qOUTYrnIko=')
+kk.login(token='ErCBFU0tdoHFMlKOwsy3.eXGEKA8y87MQtoFvPFGwuW.Vx0KFfWTloatnOQvYlsano/C1ippBiQ8XypfBYy77gk=')
 kk.loginResult()
 print "Kk-Login Success\n"
 
 kc = LINETCR.LINE()
 #kc.login(qr=True)
-kc.login(token='Erfr5XQAVjKIXwfYjT33.Z7tUqKO5oaEP2cnIzYreyW.mifl520WPj4RNQ7i40LVxjVm6sIFaLK092xFHbrv2+s=')
+kc.login(token='ErqiO4H8zAHKfnFUxYp8.1e8nOeP/17yuiWiheXA//a.084MroAJQmR7zg+X/j6HN4DQ/F08NK2+Aurn0SUAnpc=')
 kc.loginResult()
 print "Kc-Login Success\n"
 
 kr = LINETCR.LINE()
 #kr.login(qr=True)
-kr.login(token='ErTVmOPrbfJ5a5LO7zyf.StMJ2yMSv7H5XrT17lGnZW.rMF/76j2t8ytEcA7l0ue8Xn4olZdLm825eDypqbByMc=')
+kr.login(token='ErQj5JDIulup80zVE3Zf.StMJ2yMSv7H5XrT17lGnZW.DJsgZiIRMtFcollpiulxmySGbTHINiBEXGU8h+Sljfk=')
 kr.loginResult()
 print "Kr-Login Success\n"
 
 km = LINETCR.LINE()
 #km.login(qr=True)
-km.login(token='Erbw8FkQTsCSxWtKItOa.SD28EqyjtLBjPT144PdcQG.MRncp08pfgFL2ZQ080cJHVqAFkfPRtD6CYichKXOj6s=')
+km.login(token='Er69AWhKw6JwPIpT9hka.SD28EqyjtLBjPT144PdcQG.nKN5kwmLup/JGQBmW4jkFWtmwR+5unHmPSyQI05cT6k=')
 km.loginResult()
 print "Km-Login Success\n\n=====[Sukses All Login]====="
 
