@@ -12,7 +12,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 vipro = LINETCR.LINE()
 #vipro.login(qr=True)
-vipro.login(token='EpJgyNvzK8xQp88I04t9.2PnOnQMgNRHUYkUzkK6jEq./p92mOc1BPmafZPSgTcw4mkpBeT/czsWHBLRbK7Aewc=')
+vipro.login(token='Erg4Xv7UiJxBp7DZtjJ2.AZs3a8Vf+ipnhLTOmQbtuG.MUASow5sT8jYj5o+ijZsQ2mRu3bfx05UGe/YnrvpLzY=')
 vipro.loginResult()
 print "Vipro-Login Success\n\n=====[Sukses Login]====="
 
@@ -49,8 +49,8 @@ selfMessage ="""
 ╠➩〘Micdel @〙
 ╠➩〘Miclist〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║              By : wahyudi 
+║     line.me/ti/p/~yudi_std02 
 ╚═════════════════════════
 """
 
@@ -69,8 +69,8 @@ botMessage ="""
 ╠➩〘@bye〙
 ╠➩〘Bot on/off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02 
 ╚═════════════════════════
 """
 
@@ -108,8 +108,8 @@ mediaMessage ="""
 ╠➩〘Id@th Text (Translate ID Ke TH〙
 ╠➩〘En@id Text (Translate En Ke ID〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02 
 ╚═════════════════════════
 """
 
@@ -143,11 +143,11 @@ groupMessage ="""
 ╠➩〘Getgroup image〙
 ╠➩〘Urlgroup Image〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
-vip="uda936836a9869eb86ec8ab992a4e8979"
+vip="u6b34b703cbc5fc83cd1e5b6832a05352"
 
 setMessage ="""
 ╔═════════════════════════
@@ -162,8 +162,8 @@ setMessage ="""
 ╠➩〘Sticker on〙
 ╠➩〘Simisimi on/off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -181,8 +181,8 @@ creatorMessage ="""
 ╠➩〘Bot restart〙
 ╠➩〘Turn off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -222,8 +222,8 @@ adminMessage ="""
 ╠➩〘Respon3 on/off〙
 ╠➩〘Responkick on/off〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -243,8 +243,8 @@ helpMessage ="""
 ╠➩〘Speed test〙
 ╠➩〘Status〙
 ╠═════════════════════════
-║             💠 By : Vipro 💠
-║    〽️ line.me/ti/p/~gjxvipro 〽️
+║             By : wahyudi
+║    line.me/ti/p/~yudi_std02
 ╚═════════════════════════
 """
 
@@ -252,8 +252,8 @@ helpMessage ="""
 KAC=[vipro]
 mid = vipro.getProfile().mid
 Bots=[mid]
-Creator=["uda936836a9869eb86ec8ab992a4e8979"]
-admin=["uda936836a9869eb86ec8ab992a4e8979"]
+Creator=["u6b34b703cbc5fc83cd1e5b6832a05352"]
+admin=["u6b34b703cbc5fc83cd1e5b6832a05352"]
 
 contact = vipro.getProfile()
 backup1 = vipro.getProfile()
@@ -286,7 +286,7 @@ wait = {
     'sticker':False,  
     'timeline':True,
     "Timeline":True,
-    "comment":"Bot Auto Like ©By : Vipro\nContact Me : 👉 line.me/ti/p/~gjxvipro",    
+    "comment":"Bot Auto Like ©By : Vipro\nContact Me : 👉 line.me/ti/p/~yudi_std02",    
     "commentOn":True,
     "commentBlack":{},
     "message":"Thx For Add Me (^_^)\nInvite Me To Your Group ヘ(^_^)ヘ",    
@@ -2161,7 +2161,7 @@ def bot(op):
                  cnt.to = msg.to
                  vipro.sendMessage(cnt)
                  
-            elif "tagall" == msg.text.lower():
+            elif "Say" == msg.text.lower():
                  group = vipro.getGroup(msg.to)
                  nama = [contact.mid for contact in group.members]
                  nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
@@ -2351,7 +2351,7 @@ def bot(op):
                 vipro.inviteIntoGroup(msg.to,[midd])
 
             elif "Invite creator" in msg.text:
-                midd = "uda936836a9869eb86ec8ab992a4e8979"
+                midd = "u6b34b703cbc5fc83cd1e5b6832a05352"
                 vipro.inviteIntoGroup(msg.to,[midd])
 
             elif msg.text in ["Welcome","welcome","Welkam","welkam","Wc","wc"]:
@@ -2369,7 +2369,7 @@ def bot(op):
 		gid = vipro.getGroupIdsJoined()
 		if msg.from_ in Creator:
 		    for i in gid:
-			vipro.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~nad_nad.")
+			vipro.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~yudi_std02.")
 		    vipro.sendText(msg.to,"Success BC BosQ")
 		else:
 		    vipro.sendText(msg.to,"Khusus Admin")
@@ -2869,7 +2869,7 @@ def bot(op):
                         vipro.sendText(msg.to, "Could not find it")                    
 
  
-            elif "Say " in msg.text:
+            elif "Say1 " in msg.text:
                 say = msg.text.replace("Say ","")
                 lang = 'id'
                 tts = gTTS(text=say, lang=lang)
