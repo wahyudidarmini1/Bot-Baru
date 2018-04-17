@@ -11,23 +11,23 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE() #wahyudi
-cl.login(token='Erbw8FkQTsCSxWtKItOa.SD28EqyjtLBjPT144PdcQG.MRncp08pfgFL2ZQ080cJHVqAFkfPRtD6CYichKXOj6s=')
+cl.login(token='ErJ9r8eUewrfxuE1PpLb.drkXjI9kC7gz45kx2rUb2W.D4qKzYDELx4TpJmpZb4QgV74yc6c6rIvgGC4dLj3Xww=')
 cl.loginResult()
 
 ki = LINETCR.LINE() #darmini
-ki.login(token='Er0Kj659SMB1eHHMP4l5.s0GaOrjP6Vfn98NxODhvLq.dVskwm24t+N1FrVjrMNrrDB4WCJNzjUDqKnQHPKyjck=')
+ki.login(token='ErcObyeuALAHalKB9dw3.eXGEKA8y87MQtoFvPFGwuW.EY8lKdsLeg4/6K7am2SPaFOHXBQuRVaKmlYGrWIsLgo=')
 ki.loginResult()
 
 kk = LINETCR.LINE() #gito
-kk.login(token='Erfr5XQAVjKIXwfYjT33.Z7tUqKO5oaEP2cnIzYreyW.mifl520WPj4RNQ7i40LVxjVm6sIFaLK092xFHbrv2+s=')
+kk.login(token='Er1I206x1kOgHOwz4wj8.1e8nOeP/17yuiWiheXA//a.Vpoe2thKCl8r8NjZ3tviVkbPibQEtEC/a38mHbKKA8M=')
 kk.loginResult()
 
 kc = LINETCR.LINE() #adam
-kc.login(token='ErbCGFJrfizHGRMwuCdf.0Gxc/M3RVqR4nYkPcDjtZW.zJruRkwA9G4MJ65S4qDZD2jGglGU4JH9T3y2oLjt7uM=')
+kc.login(token='ErNWKGHGwXaLki7ML72f.StMJ2yMSv7H5XrT17lGnZW.TGLf4X1ECQipB7QP/WjsvCO/9bDhPyvnUgbmc2GN188=')
 kc.loginResult()
 
 ks = LINETCR.LINE() #dimas
-ks.login(token='ErVN3iCCCVGqLmMh37u9.VfG2daMSMKOL78PxRGOi6q.joiZOkRzJMFaIdCw8fc05/MTTUDw6jFH7SynZMohCAo=')
+ks.login(token='ErpngJ0ICHe5ODSipsO3.Z7tUqKO5oaEP2cnIzYreyW.5tuqt3PpTLG7Qg/N70aVD1gQ7UvJrMH6Vdgu1p/KaIM=')
 ks.loginResult()
 
 print "login success plak"
