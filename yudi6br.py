@@ -3458,7 +3458,7 @@ def bot(op):
 #                start = time.time()
                 cl.sendText(msg.to, "0.021980063087 secound","0.026850063087 secound","0.0209760063087 secound")
 #-----------------------------------------------
-            elif msg.text.lower() == 'prank in':
+            elif msg.text.lower() == 'Masuk':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
@@ -3469,14 +3469,14 @@ def bot(op):
                         time.sleep(0.01)
                         ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
                         time.sleep(0.01)
-#                        ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
-     #                   time.sleep(0.01)
-          #              ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-               #         time.sleep(0.01)
-                    #    ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                        time.sleep(0.01)
-     #                   ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
-          #              time.sleep(0.01)
+                        ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
+                        ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        time.sleep(0.01)
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
@@ -3803,17 +3803,17 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         ki18.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text.lower() == 'prank out':
+            elif msg.text.lower() == 'Moleh':
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
-#                        cl.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  + "")
+                        cl.sendText(msg.to,"􀜁􀇔􏿿Bye Bye😘 "  +  str(ginfo.name)  + "")
                         ki.leaveGroup(msg.to)
                         ki2.leaveGroup(msg.to)
-#                        ki3.leaveGroup(msg.to)
-     #                   ki4.leaveGroup(msg.to)
-          #              ki5.leaveGroup(msg.to)
-               #         ki6.leaveGroup(msg.to)
+                        ki3.leaveGroup(msg.to)
+                        ki4.leaveGroup(msg.to)
+                        ki5.leaveGroup(msg.to)
+                        ki6.leaveGroup(msg.to)
                     except:
                         pass
 #-----------------------------------------------
