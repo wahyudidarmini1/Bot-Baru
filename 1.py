@@ -12,7 +12,7 @@ import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,
 
 vipro = LINETCR.LINE()
 #vipro.login(qr=True)
-vipro.login(token='Erg4Xv7UiJxBp7DZtjJ2.AZs3a8Vf+ipnhLTOmQbtuG.MUASow5sT8jYj5o+ijZsQ2mRu3bfx05UGe/YnrvpLzY=')
+vipro.login(token='ErrGYNaPSsdW8Pl45aA2.AZs3a8Vf+ipnhLTOmQbtuG.XdmVLtzahrL25V9ExCG2PU4XyNcbCv7839vjqjqyy0k=')
 vipro.loginResult()
 print "Vipro-Login Success\n\n=====[Sukses Login]====="
 
