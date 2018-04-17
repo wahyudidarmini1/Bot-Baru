@@ -11,27 +11,27 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="ErDbAYXZKzz87MXMK961.hSPlQK0sOlldo8W2iFcJWq.QLWrkVhkfaP17DS5WjAlSHI2u7nzf0OqjM0fvkfSA3Q=")
+cl.login(token="ErJ9r8eUewrfxuE1PpLb.drkXjI9kC7gz45kx2rUb2W.D4qKzYDELx4TpJmpZb4QgV74yc6c6rIvgGC4dLj3Xww=")
 cl.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="ErIcUdnFCIEVjw9RUnYe.4uWnRTJU51yT+/CjXTyHBG.62IuWFh+yNFYYIzW2gaSIb9xiwpGpel7ND+17rl/+gQ=")
+kt.login(token="ErcObyeuALAHalKB9dw3.eXGEKA8y87MQtoFvPFGwuW.EY8lKdsLeg4/6K7am2SPaFOHXBQuRVaKmlYGrWIsLgo=")
 kt.loginResult()
 
 ks = LINETCR.LINE()
-ks.login(token="Er7i7eG4tYumZYLGILw4./0DOo/10A+PUJG8iHA76Pa.xZYotGiBJf5ZRWH1gEQ8JwIKweDg0F2H2M2101t94ns=")
+ks.login(token="Er1I206x1kOgHOwz4wj8.1e8nOeP/17yuiWiheXA//a.Vpoe2thKCl8r8NjZ3tviVkbPibQEtEC/a38mHbKKA8M=")
 ks.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="ErVmcbe6ILNRNeRaKrh3.eXGEKA8y87MQtoFvPFGwuW.ilPJGgdrZ2bjxR6bow/H5sF8hyxrqF3d7qOUTYrnIko=")
+ki.login(token="ErNWKGHGwXaLki7ML72f.StMJ2yMSv7H5XrT17lGnZW.TGLf4X1ECQipB7QP/WjsvCO/9bDhPyvnUgbmc2GN188=")
 ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="ErqiO4H8zAHKfnFUxYp8.1e8nOeP/17yuiWiheXA//a.084MroAJQmR7zg+X/j6HN4DQ/F08NK2+Aurn0SUAnpc=")
+kk.login(token="ErpngJ0ICHe5ODSipsO3.Z7tUqKO5oaEP2cnIzYreyW.5tuqt3PpTLG7Qg/N70aVD1gQ7UvJrMH6Vdgu1p/KaIM=")
 kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="ErGgCtK6JauWilGoYj7f.StMJ2yMSv7H5XrT17lGnZW.9TbzAmzjeHGuF953Z0x1E8/ylr7Zxy9nJxvlG55CrxQ=")
+kc.login(token="ErP2g20415o8sB48RyG1.hSPlQK0sOlldo8W2iFcJWq.HuNM1g0SbgS/PhGftj8pTk99foZvTS55qLqKCbr8YAs=")
 kc.loginResult()
 
 print "yudi"
