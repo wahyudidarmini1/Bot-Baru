@@ -10,10 +10,60 @@ from googletrans import Translator
 from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
-vipro = LINETCR.LINE()
-#vipro.login(qr=True)
-vipro.login(token='ErrGYNaPSsdW8Pl45aA2.AZs3a8Vf+ipnhLTOmQbtuG.XdmVLtzahrL25V9ExCG2PU4XyNcbCv7839vjqjqyy0k=')
-vipro.loginResult()
+cl = LINETCR.LINE() 
+#cl.login(qr=True)
+cl.login(token="ErJ9r8eUewrfxuE1PpLb.drkXjI9kC7gz45kx2rUb2W.D4qKzYDELx4TpJmpZb4QgV74yc6c6rIvgGC4dLj3Xww=")#1
+cl.loginResult()
+
+ki = LINETCR.LINE() 
+#ki.login(qr=True)
+ki.login(token="ErrGYNaPSsdW8Pl45aA2.AZs3a8Vf+ipnhLTOmQbtuG.XdmVLtzahrL25V9ExCG2PU4XyNcbCv7839vjqjqyy0k=")#2
+ki.loginResult()
+
+kk = LINETCR.LINE() 
+#kk.login(qr=True)
+kk.login(token="ErcObyeuALAHalKB9dw3.eXGEKA8y87MQtoFvPFGwuW.EY8lKdsLeg4/6K7am2SPaFOHXBQuRVaKmlYGrWIsLgo=")#3
+kk.loginResult()
+
+kc = LINETCR.LINE() 
+#kc.login(qr=True)
+kc.login(token="Er1I206x1kOgHOwz4wj8.1e8nOeP/17yuiWiheXA//a.Vpoe2thKCl8r8NjZ3tviVkbPibQEtEC/a38mHbKKA8M=")#4
+kc.loginResult()
+
+ks = LINETCR.LINE() 
+#ks.login(qr=True)
+ks.login(token="ErNWKGHGwXaLki7ML72f.StMJ2yMSv7H5XrT17lGnZW.TGLf4X1ECQipB7QP/WjsvCO/9bDhPyvnUgbmc2GN188=")#5
+ks.loginResult()
+
+k1 = LINETCR.LINE() 
+#k1.login(qr=True)
+k1.login(token="ErpngJ0ICHe5ODSipsO3.Z7tUqKO5oaEP2cnIzYreyW.5tuqt3PpTLG7Qg/N70aVD1gQ7UvJrMH6Vdgu1p/KaIM=")#6
+k1.loginResult()
+
+k2 = LINETCR.LINE() 
+#k2.login(qr=True)
+k2.login(token="ErP2g20415o8sB48RyG1.hSPlQK0sOlldo8W2iFcJWq.HuNM1g0SbgS/PhGftj8pTk99foZvTS55qLqKCbr8YAs=")#7
+k2.loginResult()
+
+k3 = LINETCR.LINE() 
+#k3.login(qr=True)
+k3.login(token="ErUepj7ypgsjzZty9LB4./0DOo/10A+PUJG8iHA76Pa.ZdiIj+iO0hWz1bt62rQLVoX0DSPwQ1hnUujqRnZc0/Q=")#8
+k3.loginResult()
+
+k4 = LINETCR.LINE() 
+#k4.login(qr=True)
+k4.login(token="ErS92P9e45KW1EWWWrGb.DQKC4akNYSJx6AqIuzyS6W.5/52fMaaVtvkyiylJLK2ZQEqcYxIJ5w+WwyWfVWyzRM=")#9
+k4.loginResult()
+
+k5 = LINETCR.LINE() 
+#k5.login(qr=True)
+k5.login(token="ErgYB2TBietY8IsSNnv9.VfG2daMSMKOL78PxRGOi6q.oXpwX0tzyCO55ulY+sE1BzfWU1dGVgHd/p3YwQRIEME=")#10
+k5.loginResult()
+
+satpam1 = LINETCR.LINE()  
+#satpam1.login(qr=True)
+satpam1.login(token="Erq7AZIgOSvLU4Ct8dpf.0Gxc/M3RVqR4nYkPcDjtZW.1uQHAn5dIb3XpBaAzqYgzHTWIOiEhOcauDmC0T1MuxI=")#satpam 
+satpam1.loginResult()
 print "Vipro-Login Success\n\n=====[Sukses Login]====="
 
 reload(sys)
