@@ -299,11 +299,26 @@ helpMessage ="""
 """
 
 
-KAC=[vipro]
+KAC=[cl,ki,kk,kc,ks,k1,k2,k3,k4]
+DEF=[ki,kk,kc,ks,k1,k2,k3,k4,k5]
+kicker=[satpam1]
+mid = cl.getProfile().mid 
+Amid = ki.getProfile().mid 
+Bmid = kk.getProfile().mid 
+Cmid = kc.getProfile().mid 
+Dmid = ks.getProfile().mid 
+Emid = k1.getProfile().mid
+Fmid = k2.getProfile().mid
+Gmid = k3.getProfile().mid
+Hmid = k4.getProfile().mid
+Imid = k5.getProfile().mid
+Smid1 = satpam1.getProfile().mid
 mid = vipro.getProfile().mid
-Bots=[mid]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
+induk=[mid]
 Creator=["u6b34b703cbc5fc83cd1e5b6832a05352"]
 admin=["u6b34b703cbc5fc83cd1e5b6832a05352"]
+owner=["u6b34b703cbc5fc83cd1e5b6832a05352"]
 
 contact = vipro.getProfile()
 backup1 = vipro.getProfile()
