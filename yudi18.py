@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
+#Chucky_Bot
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,json,codecs,threading,glob,re,ast,os,subprocess,requests
+from bs4 import BeautifulSoup
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
 cl.login(token="En9hx4y9BouKrcqBgrW2.AZs3a8Vf+ipnhLTOmQbtuG./pihHAssaz6gq8UFmimEnmZDziv8PuMI4++5Thy7nM0=")
