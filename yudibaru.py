@@ -4912,6 +4912,6 @@ while True:
 
     for Op in Ops:
         if (Op.type != OpType.END_OF_OPERATION):
-            acil.Poll.rev = max(cl.Poll.rev, Op.revision)
+            cl.Poll.rev = max(cl.Poll.rev, Op.revision)
             bot(Op)
 
