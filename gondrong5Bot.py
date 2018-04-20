@@ -6,11 +6,11 @@ from datetime import datetime
 import time,random,sys,json,codecs,threading,glob,re,os,subprocess
 
 cl = LINETCR.LINE() #Luffy
-cl.login(token="EsHYnAfAtFxeI384Fl93./1+U7PaL+Yrh/gwcQRLguW.iBUGgdaHMfKkSXUf0u2INH/nG7OQsproHGZD+1MUOz4=")
+cl.login(token="Esgi5oNjrT6uty6fVECb.rZtGKVCYYHzmZszv626OIW.uuGlEXNMEmy/WosdHXwC81NOY29HABjKVr6Hi2Nxy0U=")
 cl.loginResult()
 
 ki = LINETCR.LINE() #Zorro
-ki.login(token="Esgi5oNjrT6uty6fVECb.rZtGKVCYYHzmZszv626OIW.uuGlEXNMEmy/WosdHXwC81NOY29HABjKVr6Hi2Nxy0U=")
+ki.login(token="EsHYnAfAtFxeI384Fl93./1+U7PaL+Yrh/gwcQRLguW.iBUGgdaHMfKkSXUf0u2INH/nG7OQsproHGZD+1MUOz4=")
 ki.loginResult()
 
 kk = LINETCR.LINE() #Sanji
@@ -76,8 +76,8 @@ Cmid = kc.getProfile().mid #Ussop
 Dmid = ks.getProfile().mid #Chooper
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid]
-admin=["u26e4eb388bac83d7631cec7a3acb6d8a"] 
-owner=["u26e4eb388bac83d7631cec7a3acb6d8a"]
+admin=["ufb5feeee9025ff2447f86582aab94653"] 
+owner=["ufb5feeee9025ff2447f86582aab94653"]
 whitelist=[""]
 wait = {
     'contact':False,
