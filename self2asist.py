@@ -1,19 +1,24 @@
 # -*- coding: utf-8 -*-
+#Vipro_Bot
 
-import PRANKBOTS
-from PRANKBOTS.lib.curve.ttypes import *
+import LINETCR
+from LINETCR.lib.curve.ttypes import *
 from datetime import datetime
-import time,random,sys,re,os,json,subprocess,codecs,threading,glob
+from bs4 import BeautifulSoup
+from threading import Thread
+from googletrans import Translator
+from gtts import gTTS
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
-acil = PRANKBOTS.LINE() 
+acil = LINETCR.LINE() 
 acil.login(token="token akun utama/selfbot")
 acil.loginResult()
 
-pb1 = PRANKBOTS.LINE() 
+pb1 = LINETCR.LINE() 
 pb1.login(token="token asist 1")
 pb1.loginResult()
 
-pb2 = PRANKBOTS.LINE() 
+pb2 = LINETCR.LINE() 
 pb2.login(token="token asist 2")
 pb2.loginResult()
 
@@ -131,9 +136,9 @@ wait = {
     'leaveRoom':True,
     'timeline':False,
     'autoAdd':True,
-    'message':"""❂••••AUTO ADD BY CHANNEL PRANKBOTS••••❂\nhttps://www.youtube.com/channel/UCycBrqSWEHdk-slnhUmGWiQ\n❂•••JANGAN LUPA DI SUBCRABE YA••••❂""",
+    'message':"""❂••••AUTO ADD BY Wong-Jombang••••❂",
     "lang":"JP",
-    "comment1":"❂••••AUTO ADD BY CHANNEL PRANKBOTS••••❂\nhttps://www.youtube.com/channel/UCycBrqSWEHdk-slnhUmGWiQ\n❂•••JANGAN LUPA DI SUBCRABE YA••••❂",
+    "comment1":"❂••••AUTO ADD BY Wong-Jombang••••❂",
     "comment":"Thanks For Add Me",
     "commentOn":False,
     "commentBlack":{},
