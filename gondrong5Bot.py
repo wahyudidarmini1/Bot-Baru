@@ -18,7 +18,7 @@ kk.login(token="Esb0XMbsCNd6KYWHlKK5.cv+fV8NaLqRd7z/Fu4bk1q.OoJFVcyw/t++KUGTAPIu
 kk.loginResult()
 
 kc = LINETCR.LINE() #Ussop
-kc.login(token="Es4Ox85qjm44SoE39o36.mVJhZzaxq149ROLaiDpbDG.luClBcLpXFH+x3iwub6PNdqFdyBPNJSKhBuUzbBsFUQ=")
+kc.login(token="EsmKknGryCnjhBtKl7l2.I3AjDl7xKBoFFJIhzC0hSG.ctD2WMFuq6PpAPL5aFPDyWbA6WPCYRA/rkbG7z0eOaM=")
 kc.loginResult()
 
 ks = LINETCR.LINE() #Chooper
