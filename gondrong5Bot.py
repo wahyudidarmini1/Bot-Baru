@@ -1779,7 +1779,7 @@ def bot(op):
                         kk.leaveGroup(msg.to)
                         kc.leaveGroup(msg.to)
                         ks.leaveGroup(msg.to)
-                        cl.leaveGroup(msg.to)
+                        #cl.leaveGroup(msg.to)
                     except:
                         pass
                       
@@ -2222,7 +2222,7 @@ def bot(op):
       #-------------Fungsi Banned Send Contact Finish------------------#
             elif msg.text in ["Creator"]:
               msg.contentType = 13
-              msg.contentMetadata = {'mid': 'ued156c86ffa56024c0acba16f7889e6d'}
+              msg.contentMetadata = {'mid': 'u6b34b703cbc5fc83cd1e5b6832a05352'}
               cl.sendText(msg.to,"======================")
               cl.sendMessage(msg)
               cl.sendText(msg.to,"======================")
@@ -2375,7 +2375,7 @@ def autolike():
       if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
         try:
           cl.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
-          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉Auto Like by ⭐⭐Koplaxs⭐⭐👈\n\n™SMULE VOICE FAMILY™")
+          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉Auto Like by ⭐⭐Wahyudi⭐⭐👈\n\n™SMULE RAKYAT INDONESIA™")
           ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
           ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
           kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
@@ -2384,7 +2384,7 @@ def autolike():
           kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
           ks.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
           ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
-          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @hanavy1992\nLagu Promo Lho Kak\n===[★]One Piece Bot Protect[★]===")
+          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @yudi_std02\nLagu Promo Lho Kak\n===[★]wong-jombang Bot Protect[★]===")
           print "Like"
         except:
           pass
@@ -2406,7 +2406,7 @@ def likePost():
                     kk.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     kc.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     ks.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by ^🔫🔫🌹🌹gOndrOnk^\nStatus Boss udah Kami Like\nOwner Kami :\இहई╬۞¥ûDï۞╬हईஇ")
+                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto like by ^wahyudi^\nStatus Boss udah Kami Like\nOwner Kami :\இहई╬۞¥ûDï۞╬हईஇ")
                     cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"=====Ready=====\n[★]Bot Protect For Group\n[★]\n[★]Selfbot in Your Account[★]\n- 1 Selfbot 1 Bot Assist\n- 1 Selfbot 2 Bot Assist\n- 1 Selfbot 3 Bot Assist\n- 1 Selfbot 4 Bot Assist\n- 1 Selfbot 5 Bot Assist\n\nMau Coba Atau Test Terlebih Dahulu Bisa\nMinat??? PM Id Line @yudi_std02\nLagu Promo Lho Kak\n===[★]இहई╬۞¥ûDï۞╬हईஇ[★]===")
                     print "Like"
                 except:
