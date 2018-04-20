@@ -1171,57 +1171,57 @@ def bot(op):
                 if wait["lang"] == "JP":
                 	cl.sendText(msg.to,helpMessage1)
                 	msg.contentType = 13
-                	cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
-                	msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                	cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
+                	msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                 	cl.sendMessage(msg)
                 else:
                 	cl.sendText(msg.to,helpMessage1)
                 	msg.contentType = 13
-                	cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
-                	msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                	cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
+                	msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                 	cl.sendMessage(msg)
             if "Media" == msg.text:
               if msg.from_ in owner:
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,helpMedia)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
                 else:
                     cl.sendText(msg.to,helpMedia)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
             if "Helpbots" == msg.text:
               if msg.from_ in owner:
                 if wait["lang"] == "JP":
                     ki.sendText(msg.to,helpself)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
                 else:
                     cl.sendText(msg.to,helpself)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
             if "Settings" == msg.text:
               if msg.from_ in owner:
                 if wait["lang"] == "JP":
                     cl.sendText(msg.to,helpset)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
                 else:
                     cl.sendText(msg.to,helpset)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
             if "Me" == msg.text:
               if msg.from_ in owner:
                        msg.contentType = 13
@@ -1249,7 +1249,7 @@ def bot(op):
                 ki.sendText(msg.to,"AMAN TERKENDALI KOMANDAN 👮")
             if "Set" == msg.text:
               if msg.from_ in owner:
-                md = "╔▬▬℘ґ∂ηк в❍тs▬▬╗\n║▬▬▬℘▬▬в▬▬▬║\n"
+                md = "╔▬▬AWOANG -AAJOMBNG▬▬╗\n║▬▬▬℘▬▬в▬▬▬║\n"
                 if wait["likeOn"] == True: md+="║☆║Like:ON➡️📱\n"
                 else: md+="║☆║Like:OFF➡️📴\n"
                 if wait["wcOn"] == True: md+="║☆║Welcome:ON➡️📱\n"
@@ -1281,7 +1281,7 @@ def bot(op):
                 if wait["autoAdd"] == True: md+="║☆║Add:ON➡️📱\n"
                 else:md+="║☆║Add:OFF➡️??\n"
                 if wait["commentOn"] == True: md+="║☆║Com:ON➡️📱\n"
-                else:md+="║☆║Com:OFF➡️📴\n║▬║❨◄▬▬▬►❩\n║☆║◄═PROTECTION═►\n║▬║▬PRANKBOTS▬╣\n"
+                else:md+="║☆║Com:OFF➡️📴\n║▬║❨◄▬▬▬►❩\n║☆║◄═PROTECTION═►\n║▬║▬wong-jombang▬╣\n"
                 if wait["protect"] == True: md+="║☆║Pro:ON➡️📱\n"
                 else:md+="║☆║Pro:OFF➡️📴\n"
                 if wait["linkprotect"] == True: md+="║☆║ProtectQr:ON➡️📱\n"
@@ -1292,7 +1292,7 @@ def bot(op):
                 else:md+="║☆║Procancel:OFF➡️📴\n"
                 if wait["pname"] == True: md+="║☆║Namelock:ON➡️📱\n"
                 else: md+="║☆║Namelock:OFF➡️📴\n"   
-                cl.sendText(msg.to,md + "║▬▬▬℘▬▬в▬▬▬║\n╚▬▬℘ґ∂ηк в❍тs▬▬╝")
+                cl.sendText(msg.to,md + "║▬▬▬℘▬▬в▬▬▬║\n╚▬▬WONG-JOMBANG▬▬╝")
             if "Sider:on" in msg.text:
 	          if msg.from_ in owner:
                     del cctv['point'][msg.to]
@@ -1424,7 +1424,7 @@ def bot(op):
                    try:
                       wait["yudi"][target] = True
                       f=codecs.open('st2__a.json','w','utf-8')
-                      json.dump(wait["yudi"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                      json.dump(wait["yudi"], f, sort_keys=True, indent=4,ensure_ci=False)
                       cl.sendText(msg.to,"OWNER MENAMBAHKAN ADMIN")
                       print "[Admin]DITAMBAHKAN"
                    except:
@@ -1447,7 +1447,7 @@ def bot(op):
                             try:
                                 del wait["ACIL"][target]
                                 f=codecs.open('st2__a.json','w','utf-8')
-                                json.dump(wait["ACIL"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                                json.dump(wait["ACIL"], f, sort_keys=True, indent=4,ensure_cl=False)
                                 cl.sendText(msg.to,"Target Unlocked")
                             except:
                                 cl.sendText(msg.to,"Error")
@@ -1560,15 +1560,15 @@ def bot(op):
                 if wait["lang"] == "JP":
                 	cl.sendText(msg.to,helpMessage1)
                 	msg.contentType = 13
-                	msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
-                	cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                	msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
+                	cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
                 	cl.sendMessage(msg)
                 else:
                     cl.sendText(msg.to,helpMessage1)
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid':'ufce863f62f40706c01fa4a3c3c4cb096'}
+                    msg.contentMetadata = {'mid':'u6b34b703cbc5fc83cd1e5b6832a05352'}
                     cl.sendMessage(msg)
-                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR PRANKBOTS")
+                    cl.sendText(msg.to,"MINAT PESAN VPS DAN SELFBOT SILAHKAN ADD CREATOR WAHYUDI")
             if "Me" == msg.text:
               if msg.from_ in wait["admin"]:
                        msg.contentType = 13
@@ -2270,7 +2270,7 @@ def bot(op):
 					ki5.sendMessage(msg)
             elif msg.text in ["Clink"]:
                 if msg.toType == 2:
-                    group = acil.getGroup(msg.to)
+                    group = cl.getGroup(msg.to)
                     group.preventJoinByTicket = False
                     cl.updateGroup(group)
                     if wait["lang"] == "JP":
@@ -3131,7 +3131,7 @@ def bot(op):
                     if wait["lang"] == "JP":
                         pass
             elif "Sider:on" in msg.text:
-	#      if msg.toType == 2:
+	      if msg.toType == 2:
                 try:
                     del cctv['point'][msg.to]
                     del cctv['sidermem'][msg.to]
@@ -3144,7 +3144,7 @@ def bot(op):
                 wait["Sider"] = True
                 cl.sendText(msg.to,"Siap On Cek Sider")
             elif "Sider:off" in msg.text:
-	#      if msg.toType == 2:
+	      if msg.toType == 2:
                 if msg.to in cctv['point']:
                     cctv['cyduk'][msg.to]=False
                     wait["Sider"] = False
@@ -4201,7 +4201,7 @@ def bot(op):
                     msg.text = txt
                     msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
                     cl.sendMessage(msg) 
-            elif msg.text.lower() == '.':
+            elif msg.text.lower() == 'Masuk':
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
