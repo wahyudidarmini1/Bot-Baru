@@ -1683,13 +1683,13 @@ def bot(op):
          #----------------Fungsi Join Group Start-----------------------#
             elif msg.text in ["Kuy","masuk","Join kuy"]: #Panggil Semua Bot
               if msg.from_ in owner:
-                G = cl.getGroup(msg.to)
-                ginfo = cl.getGroup(msg.to)
+                G = ki.getGroup(msg.to)
+                ginfo = ki.getGroup(msg.to)
                 G.preventJoinByTicket = False
-                cl.updateGroup(G)
+                ki.updateGroup(G)
                 invsend = 0
                 Ticket = cl.reissueGroupTicket(msg.to)
-                ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                cl.acceptGroupInvitationByTicket(msg.to,Ticket)
                 time.sleep(0.01)
                 kk.acceptGroupInvitationByTicket(msg.to,Ticket)
                 time.sleep(0.01)
@@ -1700,7 +1700,7 @@ def bot(op):
                 G = cl.getGroup(msg.to)
                 ginfo = cl.getGroup(msg.to)
                 G.preventJoinByTicket = True
-                cl.updateGroup(G)
+                ki.updateGroup(G)
                 print "Semua Sudah Lengkap"
                         
             elif msg.text in ["Kampret join"]:
@@ -1775,11 +1775,11 @@ def bot(op):
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
-                        ki.leaveGroup(msg.to)
+                        #ki.leaveGroup(msg.to)
                         kk.leaveGroup(msg.to)
                         kc.leaveGroup(msg.to)
                         ks.leaveGroup(msg.to)
-                        #cl.leaveGroup(msg.to)
+                        cl.leaveGroup(msg.to)
                     except:
                         pass
                       
