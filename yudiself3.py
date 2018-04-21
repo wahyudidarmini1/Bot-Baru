@@ -1,42 +1,48 @@
-# -*- coding: utf-8 -*-
-#Vipro_Bot
+# -*- coding: utf-8 -*- 
+#Chucky_Bot
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
+from multiprocessing import Pool, Process
+from time import sleep
+import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
+from datetime import timedelta, date
 from datetime import datetime
 from bs4 import BeautifulSoup
-from threading import Thread
-from googletrans import Translator
-from gtts import gTTS
-import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
-cl = LineClient(authToken='ErrGYNaPSsdW8Pl45aA2.AZs3a8Vf+ipnhLTOmQbtuG.XdmVLtzahrL25V9ExCG2PU4XyNcbCv7839vjqjqyy0k=')
-cl.log("Auth Token : " + str(cl.authToken))
-channel = LineChannel(cl)
-cl.log("Channel Access Token : " + str(channel.channelAccessToken))
+cl = LINETCR.LINE()
+#cl.login(qr=True)
+cl.login(token='EsrHPYYLUrus46DmAtP2.AZs3a8Vf+ipnhLTOmQbtuG.aF8IUtBF47m/xG3eJL9P4aP3DqYU0lu2Qq3CFZetK58=')
+cl.loginResult()
+print "Cl-Login Success\n"
 
-ki = LineClient(authToken='ErfkuLcvXji1L8bfKmGe.4uWnRTJU51yT+/CjXTyHBG.JbJ1DHcFJONZRg319IBGY5KVUb1y5w1Cmqd9CrOrjGc=')
-ki.log("Auth Token : " + str(ki.authToken))
-channel1 = LineChannel(ki)
-ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
+ki = LINETCR.LINE()
+#ki.login(qr=True)
+ki.login(token='EsIgDTLzWCCP0vaWKCpb.drkXjI9kC7gz45kx2rUb2W.BREqzLd1atgEYr7lfEPwWnbgQqSDcBeD1jcOmepAhDY=')
+ki.loginResult()
+print "Ki-Login Success\n"
 
-kk = LineClient(authToken='ErJ9r8eUewrfxuE1PpLb.drkXjI9kC7gz45kx2rUb2W.D4qKzYDELx4TpJmpZb4QgV74yc6c6rIvgGC4dLj3Xww=')
-kk.log("Auth Token : " + str(kk.authToken))
-channel2 = LineChannel(kk)
-kk.log("Channel Access Token : " + str(channel2.channelAccessToken))
+kk = LINETCR.LINE()
+#kk.login(qr=True)
+kk.login(token='ErcObyeuALAHalKB9dw3.eXGEKA8y87MQtoFvPFGwuW.EY8lKdsLeg4/6K7am2SPaFOHXBQuRVaKmlYGrWIsLgo=')
+kk.loginResult()
+print "Kk-Login Success\n"
 
-kc = LineClient(authToken='ErcObyeuALAHalKB9dw3.eXGEKA8y87MQtoFvPFGwuW.EY8lKdsLeg4/6K7am2SPaFOHXBQuRVaKmlYGrWIsLgo=')
-kc.log("Auth Token : " + str(kc.authToken))
-channel3 = LineChannel(kc)
-kc.log("Channel Access Token : " + str(channel3.channelAccessToken))
+kc = LINETCR.LINE()
+#kc.login(qr=True)
+kc.login(token='Esb2BkWPDY2j0kHYvhG8.1e8nOeP/17yuiWiheXA//a.mcG/x3V1L+74JDW06/7i9+jABWgG3FkMDlSv/dKogPM=')
+kc.loginResult()
+print "Kc-Login Success\n"
 
-sw = LineClient(authToken='Er1I206x1kOgHOwz4wj8.1e8nOeP/17yuiWiheXA//a.Vpoe2thKCl8r8NjZ3tviVkbPibQEtEC/a38mHbKKA8M=')
-sw.log("Auth Token : " + str(sw.authToken))
-channel11 = LineChannel(sw)
-sw.log("Channel Access Token : " + str(channel11.channelAccessToken))
+kr = LINETCR.LINE()
+#kr.login(qr=True)
+kr.login(token='ErNWKGHGwXaLki7ML72f.StMJ2yMSv7H5XrT17lGnZW.TGLf4X1ECQipB7QP/WjsvCO/9bDhPyvnUgbmc2GN188=')
+kr.loginResult()
+print "Kr-Login Success\n"
 
-poll = LinePoll(cl)
-call = LineCall(cl)
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 creator = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
 owner = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
 admin = ["u6b34b703cbc5fc83cd1e5b6832a05352"]
@@ -329,7 +335,6 @@ def help():
                   "™↔ " + key + "Broadcast:「Text」\n" + \
                   "™↔ " + key + "Setkey「New Key」\n" + \
                   "™↔ " + key + "Mykey\n" + \
-                  #"™↔ " + key + "Resetkey\n" + \ 
                   "\n ™[Selfbot Hiburan]™\n   Gunakan「 " + key + " 」di depannya\n\n" + \
                   "™↔ " + key + "ID line:「Id Line nya」\n" + \
                   "™↔ " + key + "Sholat:「Nama Kota」\n" + \
