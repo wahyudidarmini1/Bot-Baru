@@ -6180,8 +6180,6 @@ def bot(op):
 #--------------------------------------------------------
 
       
-
-
 def a2():
     now2 = datetime.now()
     nowT = datetime.strftime(now2,"%M")
