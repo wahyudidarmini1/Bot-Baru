@@ -6179,9 +6179,6 @@ def bot(op):
 		    cl.sendText(msg.to, "No Access")
 #--------------------------------------------------------
 
-
-
-
         if op.type == 59:
             print op
 
