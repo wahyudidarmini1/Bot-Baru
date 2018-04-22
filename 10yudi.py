@@ -6178,8 +6178,14 @@ def bot(op):
 		else:
 		    cl.sendText(msg.to, "No Access")
 #--------------------------------------------------------
+        if op.type == 59:
+            print op
 
-      
+
+    except Exception as error:
+        print error
+
+
 def a2():
     now2 = datetime.now()
     nowT = datetime.strftime(now2,"%M")
@@ -6208,16 +6214,16 @@ def autolike():
           k2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
           k3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1001)
           k3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Aku Juga Ikutin Boss Aku Like Status Kamu Ka\n\n Like Back yah Ka 😊")
-          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+          cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
           print "Like"
         except:
           pass
       else:
           print "Already Liked"
-time.sleep(0.01)
-thread3 = threading.Thread(target=autolike)
-thread3.daemon = True
-thread3.start()
+#time.sleep(0.01)
+#thread3 = threading.Thread(target=autolike)
+#thread3.daemon = True
+#thread3.start()
 #--------------------
 def likePost():
     for zx in range(0,500):
@@ -6235,14 +6241,14 @@ def likePost():
                     k3.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     k4.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
                     k5.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
-                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    k1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    k2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
-                    k3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by YUDI ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    cl.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    kk.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    kc.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    ks.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    k1.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    k2.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
+                    k3.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"👉ąµţ๏ℓɨЌ€ By✰ tɛǟʍ Wahyudi ɮօt ✰😊\n\n☆º°˚˚☆ tɛǟʍ Wahyudi ɮօt ✰°˚˚☆（＾ω＾）\nąµţ๏ℓɨЌ€ by Kris ⭐👈 »»» http://line.me/ti/p/yudi_std02 «««")
                     print "Like"
                 except:
                     pass
