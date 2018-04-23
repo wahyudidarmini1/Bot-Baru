@@ -47,7 +47,6 @@ class LINE:
               'X-Line-Access': self.authToken, 
               'User-Agent': 'Line/7.14.0'
    }
-   
     self.Poll = Poll(self.authToken)
     self.channel = channel.Channel(self.authToken)
     self.channel.login()	
