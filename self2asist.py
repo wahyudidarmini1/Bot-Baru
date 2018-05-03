@@ -11,15 +11,15 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 acil = LINETCR.LINE() 
-acil.login(token="token akun utama/selfbot")
+acil.login(token="EsChWMepSb9lKr6nS9i4./0DOo/10A+PUJG8iHA76Pa.9WT1pKEmje7MEZT/bcAcwS88hnqZnZ9b7LWIwv16eQE=")
 acil.loginResult()
 
 pb1 = LINETCR.LINE() 
-pb1.login(token="token asist 1")
+pb1.login(token="EsdEUHmcmXmC1Ehy7SF8.BQIP++PfVBkYt2USSm1tMa.fgJ1idwHPIeOEgCucm1eGbhPIAaXD6OF6uNCq2QaHhg=")
 pb1.loginResult()
 
 pb2 = LINETCR.LINE() 
-pb2.login(token="token asist 2")
+pb2.login(token="EsGF8Z87SWaHW2URVvh4.bOiJimUzjLhiapSWdVjeva.UsxdGxVB3rBZP8mZckDG+SlGkNfcfJEgWb6VGIX8lyI=")
 pb2.loginResult()
 
 
@@ -127,7 +127,7 @@ mid = acil.getProfile().mid
 pb1mid = pb1.getProfile().mid
 pb2mid = pb2.getProfile().mid
 Bots=[mid,pb1mid,pb2mid]
-admsa = "mid akun utama/sb"
+admsa = "ufb47683bed746bfa6e8e0f0885aefaa4"
 
 wait = {
     'contact':False,
