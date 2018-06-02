@@ -11,27 +11,27 @@ from gtts import gTTS
 import time,random,sys,json,codecs,threading,glob,urllib,urllib2,urllib3,re,ast,os,subprocess,requests,tempfile
 
 cl = LINETCR.LINE()
-cl.login(token="ErJ9r8eUewrfxuE1PpLb.drkXjI9kC7gz45kx2rUb2W.D4qKzYDELx4TpJmpZb4QgV74yc6c6rIvgGC4dLj3Xww=")
+cl.login(token="EtmpidWznNMKo6cTJ9W2.AZs3a8Vf+ipnhLTOmQbtuG.uD+KPLg7mcuzsnCm9h6oZgjJs7bZ1J6xkF9I7zplrHk=")
 cl.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="ErcObyeuALAHalKB9dw3.eXGEKA8y87MQtoFvPFGwuW.EY8lKdsLeg4/6K7am2SPaFOHXBQuRVaKmlYGrWIsLgo=")
+kt.login(token="Et8D8zWMfLbqTwia6uHe.4uWnRTJU51yT+/CjXTyHBG.mtq7CFgj68HkOdSAp+1SgS6yS5OVHmHfj3JeBrbMCxQ=")
 kt.loginResult()
 
 ks = LINETCR.LINE()
-ks.login(token="Er1I206x1kOgHOwz4wj8.1e8nOeP/17yuiWiheXA//a.Vpoe2thKCl8r8NjZ3tviVkbPibQEtEC/a38mHbKKA8M=")
+ks.login(token="EtSDJ5uVw6l8gv3qkojf.0Gxc/M3RVqR4nYkPcDjtZW.7eafq5FprOOSv4RkXIdClQ77AppaFYwntQWXMYuM0C4=")
 ks.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="ErNWKGHGwXaLki7ML72f.StMJ2yMSv7H5XrT17lGnZW.TGLf4X1ECQipB7QP/WjsvCO/9bDhPyvnUgbmc2GN188=")
+ki.login(token="EtOm4WgkN3Cpx38D2KN6.u5E0qHumGolsyebggFHFzG.JVLjq58HW8zbIacp/Fim3hohXCrpULuFZV+77cDrtHc=")
 ki.loginResult()
 
 kk = LINETCR.LINE()
-kk.login(token="ErpngJ0ICHe5ODSipsO3.Z7tUqKO5oaEP2cnIzYreyW.5tuqt3PpTLG7Qg/N70aVD1gQ7UvJrMH6Vdgu1p/KaIM=")
+kk.login(token="EtEqe3j7vp7mQynO2sta.SD28EqyjtLBjPT144PdcQG.u5qmrGAiOGeThdVinnQyFhoBIpxDVMERF9FZsDacEHM=")
 kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token="ErP2g20415o8sB48RyG1.hSPlQK0sOlldo8W2iFcJWq.HuNM1g0SbgS/PhGftj8pTk99foZvTS55qLqKCbr8YAs=")
+kc.login(token="Et1lmsANFvgB7dv60aH8.BQIP++PfVBkYt2USSm1tMa.2Ml9J7gxoZH4K/ADo8evlX06mVZBx2GWoLq/RpCB7+8=")
 kc.loginResult()
 
 print "yudi"
@@ -336,8 +336,8 @@ autoinvite = []
 autoleaveroom = []
 targets = []
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid]
-admin = ["u6b34b703cbc5fc83cd1e5b6832a05352","u1eca4baa4d12a0b2c33bcc3621f0a3c1"]
-owner = ["u6b34b703cbc5fc83cd1e5b6832a05352","u1eca4baa4d12a0b2c33bcc3621f0a3c1"]
+admin = ["u6b34b703cbc5fc83cd1e5b6832a05352","ue14c0daed8eee7562dffe709c6d6216e"]
+owner = ["u6b34b703cbc5fc83cd1e5b6832a05352","ue14c0daed8eee7562dffe709c6d6216e"]
 wait = {
     'contact':False,
     'autoJoin':True,
